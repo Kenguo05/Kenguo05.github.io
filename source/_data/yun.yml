@@ -101,3 +101,32 @@ notice:
   content: 欢迎来到我的牢骚站😁
 
 pages:
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-book-2-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+  custom:
+    title: 源码
+    path: https://github.com/Kenguo05/Kenguo05.github.io/tree/hexo
+    icon: icon-archive-line
+
+reward:
+  enable: false
+
+footer:
+  live_time:
+    enable: true
+    prefix: 此站点已破壳
+    suffix: _(:з」∠)_
+    start_time: "2021-07-29T00:00:00"
