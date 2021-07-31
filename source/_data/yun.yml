@@ -130,3 +130,14 @@ footer:
     prefix: 此站点已破壳
     suffix: _(:з」∠)_
     start_time: "2021-07-29T00:00:00"
+
+codeblock:
+  copy_btn: true
+  prismjs:
+    light: default
+    dark: tomorrow
+
+wordcount:
+  enable: true
+  count: true
+  time: true
