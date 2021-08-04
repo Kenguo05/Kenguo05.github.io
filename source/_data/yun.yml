@@ -122,7 +122,18 @@ menu:
     icon: icon-archive-line
 
 reward:
-  enable: false
+  enable: true
+  icon: icon-hand-coin-line
+  comment: 孩子没吃的了TAT
+  methods:
+    - name: 支付宝
+      path: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img/img/pay-qrcode/IMG_20210804_163731.jpg
+      color: "#00A3EE"
+      icon: icon-alipay-line
+    - name: 微信支付
+      path: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img/img/pay-qrcode/IMG_20210804_163811.png
+      color: "#2DC100"
+      icon: icon-wechat-pay-line
 
 footer:
   live_time:
