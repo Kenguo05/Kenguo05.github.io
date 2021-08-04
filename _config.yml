@@ -110,7 +110,7 @@ deploy:
 feed:
   enable: true
   type: atom
-  path: source/atom.xml
+  path: atom.xml
   limit: 20
   hub:
   content:
