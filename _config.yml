@@ -29,6 +29,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+  - README.md
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -91,7 +92,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
-exclude:
+exclude: 
 ignore:
 
 # Extensions
@@ -105,3 +106,17 @@ deploy:
   type: git
   repo: https://github.com/Kenguo05/Kenguo05.github.io.git
   branch: main
+
+feed:
+  enable: true
+  type: atom
+  path: source/atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: 
+  autodiscovery: true
+  template:
