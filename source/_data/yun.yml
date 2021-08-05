@@ -152,3 +152,7 @@ wordcount:
   enable: true
   count: true
   time: true
+
+local_search:
+  enable: true
+  src: /js/search/local-search.js 
