@@ -1,5 +1,10 @@
 mode: auto
 
+bg_image:
+  enable: true
+  url: /images/Blue_poison.jpg
+  opacity: 0.8
+
 avatar:
   enable: true
   url: /images/avatar.png
