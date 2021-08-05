@@ -2,7 +2,7 @@ mode: auto
 
 bg_image:
   enable: true
-  url: /images/Blue_poison.jpg
+  url: /images/asuka.jpg
   opacity: 0.8
 
 avatar:
@@ -126,6 +126,8 @@ menu:
     path: https://github.com/Kenguo05/Kenguo05.github.io/tree/hexo
     icon: icon-archive-line
 
+post_card:
+  opacity: 0.6
 reward:
   enable: true
   icon: icon-hand-coin-line
