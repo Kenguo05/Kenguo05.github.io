@@ -6,7 +6,7 @@
   <link href="https://kenguo05.github.io/atom.xml" rel="self"/>
   
   <link href="https://kenguo05.github.io/"/>
-  <updated>2021-07-29T15:22:48.054Z</updated>
+  <updated>2021-08-05T14:56:33.677Z</updated>
   <id>https://kenguo05.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客搭建过程与心得</title>
+    <link href="https://kenguo05.github.io/2021/08/05/blog-generating-sharing/"/>
+    <id>https://kenguo05.github.io/2021/08/05/blog-generating-sharing/</id>
+    <published>2021-08-05T12:23:48.000Z</published>
+    <updated>2021-08-05T14:56:33.677Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;第一次自己搭建博客&quot;&gt;&lt;a href=&quot;#第一次自己搭建博客&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Kken的心得分享" scheme="https://kenguo05.github.io/categories/Kken%E7%9A%84%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="技术心得" scheme="https://kenguo05.github.io/categories/Kken%E7%9A%84%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/%E6%8A%80%E6%9C%AF%E5%BF%83%E5%BE%97/"/>
+    
+    
+    <category term="Hexo" scheme="https://kenguo05.github.io/tags/Hexo/"/>
+    
+    <category term="博客搭建" scheme="https://kenguo05.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="分享" scheme="https://kenguo05.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>My first blog</title>
