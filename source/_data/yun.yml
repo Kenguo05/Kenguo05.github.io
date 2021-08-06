@@ -2,7 +2,7 @@ mode: auto
 
 bg_image:
   enable: true
-  url: /images/asuka.jpg
+  url: /images/Rem_up.jpg
   opacity: 0.8
 
 avatar:
