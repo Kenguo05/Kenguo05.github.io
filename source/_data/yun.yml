@@ -173,3 +173,12 @@ wordcount:
 local_search:
   enable: true
   src: /js/search/local-search.js 
+
+busuanzi:
+  enable: true
+  site_uv: true
+  site_uv_icon: icon-user-line
+  site_pv: true
+  site_pv_icon: icon-eye-line
+  page_pv: true
+  page_pv_icon: icon-eye-line
