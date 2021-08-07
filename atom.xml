@@ -3,11 +3,11 @@
   <title>Kkenの牢骚站</title>
   
   <subtitle>一般屑学生的辣鸡博客</subtitle>
-  <link href="http://47.106.164.120/atom.xml" rel="self"/>
+  <link href="https://kenguo05.github.io/atom.xml" rel="self"/>
   
-  <link href="http://47.106.164.120/"/>
+  <link href="https://kenguo05.github.io/"/>
   <updated>2021-08-05T15:11:58.687Z</updated>
-  <id>http://47.106.164.120/</id>
+  <id>https://kenguo05.github.io/</id>
   
   <author>
     <name>Kken</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>博客搭建过程与心得</title>
-    <link href="http://47.106.164.120/2021/08/05/blog-generating-sharing/"/>
-    <id>http://47.106.164.120/2021/08/05/blog-generating-sharing/</id>
+    <link href="https://kenguo05.github.io/2021/08/05/blog-generating-sharing/"/>
+    <id>https://kenguo05.github.io/2021/08/05/blog-generating-sharing/</id>
     <published>2021-08-05T12:23:48.000Z</published>
     <updated>2021-08-05T15:11:58.687Z</updated>
     
@@ -34,23 +34,23 @@
     
     
     
-    <category term="Kken的心得分享" scheme="http://47.106.164.120/categories/Kken%E7%9A%84%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/"/>
+    <category term="Kken的心得分享" scheme="https://kenguo05.github.io/categories/Kken%E7%9A%84%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/"/>
     
-    <category term="技术心得" scheme="http://47.106.164.120/categories/Kken%E7%9A%84%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/%E6%8A%80%E6%9C%AF%E5%BF%83%E5%BE%97/"/>
+    <category term="技术心得" scheme="https://kenguo05.github.io/categories/Kken%E7%9A%84%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB/%E6%8A%80%E6%9C%AF%E5%BF%83%E5%BE%97/"/>
     
     
-    <category term="Hexo" scheme="http://47.106.164.120/tags/Hexo/"/>
+    <category term="Hexo" scheme="https://kenguo05.github.io/tags/Hexo/"/>
     
-    <category term="博客搭建" scheme="http://47.106.164.120/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://kenguo05.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
-    <category term="分享" scheme="http://47.106.164.120/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://kenguo05.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>My first blog</title>
-    <link href="http://47.106.164.120/2021/07/28/My-first-blog/"/>
-    <id>http://47.106.164.120/2021/07/28/My-first-blog/</id>
+    <link href="https://kenguo05.github.io/2021/07/28/My-first-blog/"/>
+    <id>https://kenguo05.github.io/2021/07/28/My-first-blog/</id>
     <published>2021-07-28T04:00:08.000Z</published>
     <updated>2021-07-29T15:22:48.054Z</updated>
     
@@ -67,17 +67,17 @@
     
     
     
-    <category term="没有内容的测试文章" scheme="http://47.106.164.120/categories/%E6%B2%A1%E6%9C%89%E5%86%85%E5%AE%B9%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <category term="没有内容的测试文章" scheme="https://kenguo05.github.io/categories/%E6%B2%A1%E6%9C%89%E5%86%85%E5%AE%B9%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="博客功能测试" scheme="http://47.106.164.120/tags/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    <category term="博客功能测试" scheme="https://kenguo05.github.io/tags/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://47.106.164.120/2021/07/28/hello-world/"/>
-    <id>http://47.106.164.120/2021/07/28/hello-world/</id>
+    <link href="https://kenguo05.github.io/2021/07/28/hello-world/"/>
+    <id>https://kenguo05.github.io/2021/07/28/hello-world/</id>
     <published>2021-07-28T03:55:51.206Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
