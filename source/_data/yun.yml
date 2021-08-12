@@ -2,7 +2,7 @@ mode: auto
 
 bg_image:
   enable: true
-  url: /images/Rem_up.jpg
+  url: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/Rem_up.jpg
   opacity: 0.8
 
 colors:
@@ -101,6 +101,7 @@ banner:
     - の
     - 牢
     - 骚
+    - 小
     - 站
   src: /js/ui/banner.js
   border: true
@@ -113,7 +114,7 @@ banner:
 
 notice:
   enable: true
-  content: 欢迎来到我的牢骚站😁
+  content: 站长很懒，文章更新随缘，不ttk，平平淡淡才是真 =￣ω￣=
 
 pages:
 
