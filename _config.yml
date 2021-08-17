@@ -104,8 +104,8 @@ theme: yun
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@120.25.227.191:/home/git/hexoblog.git
-  branch: master
+  repo: https://github.com/Kenguo05/Kenguo05.github.io
+  branch: main
 
 feed:
   enable: true

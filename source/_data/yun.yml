@@ -29,21 +29,21 @@ avatar:
     message: 永远相信美好的事情即将发生
 
 social:
-  #- name: RSS
+  - name: RSS
     # set rss in your root config
     # https://github.com/hexojs/hexo-generator-feed
-  #  link: /atom.xml # config.feed.path
-  #  icon: icon-rss-line
-  #  color: orange
+    link: /atom.xml # config.feed.path
+    icon: icon-rss-line
+    color: orange
   #- name: QQ 群 1050458482
     # https://isux.tencent.com/wp-content/uploads/2016/05/20160512101222609.pdf
   #  link: https://qm.qq.com/cgi-bin/qm/qr?k=kZJzggTTCf4SpvEQ8lXWoi5ZjhAx0ILZ&jump_from=webapi
   #  icon: icon-qq-line
   #  color: "#12B7F5"
-  #- name: GitHub
-  #  link: https://github.com/Kenguo05
-  #  icon: icon-github-line
-  #  color: "#6e5494"
+  - name: GitHub
+    link: https://github.com/Kenguo05
+    icon: icon-github-line
+    color: "#6e5494"
   #- name: 微博
   #  link: https://weibo.com/jizhideyunyoujun
   #  icon: icon-weibo-line
@@ -56,14 +56,14 @@ social:
   #  link: https://music.163.com/#/user/home?id=247102977
   #  icon: icon-netease-cloud-music-line
   #  color: "#C20C0C"
-  #- name: 知乎
-  #  link: https://www.zhihu.com/people/chu-jian-72-81-2
-  #  icon: icon-zhihu-line
-  #  color: "#0084FF"
-  #- name: 哔哩哔哩
-  #  link: https://space.bilibili.com/141573043
-  #  icon: icon-bilibili-line
-  #  color: "#FF8EB3"
+  - name: 知乎
+    link: https://www.zhihu.com/people/chu-jian-72-81-2
+    icon: icon-zhihu-line
+    color: "#0084FF"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/141573043
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
   # - name: POPI
   #   link: https://www.popiapp.cn/elpsycn
   #   icon: icon-questionnaire-line
@@ -85,10 +85,10 @@ social:
     # icon: icon-telegram-fill
   #  icon: icon-telegram-line
   #  color: "#0088CC"
-  #- name: E-Mail
-  #  link: mailto:2330281803@qq.com
-  #  icon: icon-mail-line
-  #  color: "#8E71C1"
+  - name: E-Mail
+    link: mailto:2330281803@qq.com
+    icon: icon-mail-line
+    color: "#8E71C1"
   #- name: Travelling
   #  link: https://travellings.link
   #  icon: icon-train-line
@@ -133,8 +133,8 @@ menu:
       path: /tags/
       icon: icon-price-tag-3-line
   custom:
-    title: 主页
-    path: /
+    title: 源文件
+    path: https://github.com/Kenguo05/Kenguo05.github.io/tree/hexo
     icon: icon-archive-line
 
 post_card:
@@ -159,6 +159,9 @@ footer:
     prefix: 此站点已破壳
     suffix: _(:з」∠)_
     start_time: "2021-07-29T00:00:00"
+  beian:
+    enable: true
+    icp: 湘ICP备2021013028号
 
 codeblock:
   copy_btn: true
@@ -183,3 +186,4 @@ busuanzi:
   site_pv_icon: icon-eye-line
   page_pv: true
   page_pv_icon: icon-eye-line
+  
