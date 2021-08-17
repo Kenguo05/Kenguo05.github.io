@@ -187,3 +187,14 @@ busuanzi:
   page_pv: true
   page_pv_icon: icon-eye-line
   
+comment:
+  enable: true
+  tips:
+    - 欢迎文明交流讨论，拒绝ttk
+  candidates:
+    - waline
+    
+waline:
+  enable: true
+  serverURL: https://blog-api-8nz1c1czc-kenguo05.vercel.app/
+  comment: false
