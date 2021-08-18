@@ -168,7 +168,7 @@ footer:
     prefix: 本网站由
     suffix: 提供CDN加速
   beian:
-    enable: true
+    enable: false
     icp: 湘ICP备2021013028号
 
 codeblock:
@@ -197,4 +197,4 @@ waline:
   enable: true
   serverURL: https://blog-api-8nz1c1czc-kenguo05.vercel.app/
   comment: false
-  placeholder: 随便说说，别把域名整没就行~~
+  placeholder: 随便说说~~
