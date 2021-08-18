@@ -154,11 +154,19 @@ reward:
       icon: icon-wechat-pay-line
 
 footer:
+  since: 2021
   live_time:
     enable: true
     prefix: 此站点已破壳
     suffix: _(:з」∠)_
     start_time: "2021-07-29T00:00:00"
+  support:
+    enable: true
+    title: 又拍云
+    link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
+    logo: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-emoji/upyun_logo5.png
+    prefix: 本网站由
+    suffix: 提供CDN加速
   beian:
     enable: true
     icp: 湘ICP备2021013028号
@@ -177,15 +185,6 @@ wordcount:
 local_search:
   enable: true
   src: /js/search/local-search.js 
-
-busuanzi:
-  enable: true
-  site_uv: true
-  site_uv_icon: icon-user-line
-  site_pv: true
-  site_pv_icon: icon-eye-line
-  page_pv: true
-  page_pv_icon: icon-eye-line
   
 comment:
   enable: true
@@ -198,3 +197,4 @@ waline:
   enable: true
   serverURL: https://blog-api-8nz1c1czc-kenguo05.vercel.app/
   comment: false
+  placeholder: 随便说说，别把域名整没就行~~
