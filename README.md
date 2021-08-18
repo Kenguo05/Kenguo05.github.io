@@ -6,7 +6,7 @@
 
 > 这里安利一波这个主题，很好康
 
-+ 站点：[Kkenの牢骚站 ](https://www.kkenblog.cn)
++ 站点：[Kkenの牢骚站 ](https://Kenguo05.github.io)
 
 ## 发布
 
