@@ -6,7 +6,7 @@
   <link href="https://kenguo05.github.io/atom.xml" rel="self"/>
   
   <link href="https://kenguo05.github.io/"/>
-  <updated>2021-08-21T14:31:28.438Z</updated>
+  <updated>2021-08-23T18:10:34.251Z</updated>
   <id>https://kenguo05.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java学习笔记-初识Java</title>
+    <link href="https://kenguo05.github.io/2021/08/24/Java-note-1/"/>
+    <id>https://kenguo05.github.io/2021/08/24/Java-note-1/</id>
+    <published>2021-08-23T17:05:41.824Z</published>
+    <updated>2021-08-23T18:10:34.251Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java-特性与优势&quot;&gt;&lt;a href=&quot;#Java-特性与优势&quot; class=&quot;headerlink&quot; title=&quot;Java 特性与优势&quot;&gt;&lt;/a&gt;Java</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    
+    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>被SSL搞疯了</title>
