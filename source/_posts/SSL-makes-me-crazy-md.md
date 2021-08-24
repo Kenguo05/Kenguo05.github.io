@@ -5,8 +5,7 @@ tags:
   - 博客搭建
   - SSL
 categories:
-  - Kken的无聊生活
-  - 不吐不快的牢骚
+  - 牢骚向
 ---
 
 ## SOS要死了要死了！！

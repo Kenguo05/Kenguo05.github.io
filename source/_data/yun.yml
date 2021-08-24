@@ -161,7 +161,7 @@ footer:
     suffix: _(:з」∠)_
     start_time: "2021-07-29T00:00:00"
   support:
-    enable: true
+    enable: false
     title: 又拍云
     link: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
     logo: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-emoji/upyun_logo5.png
