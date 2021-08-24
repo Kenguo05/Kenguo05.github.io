@@ -6,7 +6,7 @@
   <link href="https://kenguo05.github.io/atom.xml" rel="self"/>
   
   <link href="https://kenguo05.github.io/"/>
-  <updated>2021-08-24T10:04:38.455Z</updated>
+  <updated>2021-08-24T12:19:01.812Z</updated>
   <id>https://kenguo05.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java学习笔记-数组</title>
+    <link href="https://kenguo05.github.io/2021/08/24/Java-note-5/"/>
+    <id>https://kenguo05.github.io/2021/08/24/Java-note-5/</id>
+    <published>2021-08-24T10:09:34.000Z</published>
+    <updated>2021-08-24T12:19:01.812Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数组的声明创建&quot;&gt;&lt;a href=&quot;#数组的声明创建&quot; class=&quot;headerlink&quot; title=&quot;数组的声明创建&quot;&gt;&lt;/a&gt;数组的声明创建&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;声明&lt;/p&gt;
+&lt;pre class=&quot;language-java&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    
+    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Java学习笔记-Java方法</title>
