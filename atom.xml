@@ -6,7 +6,7 @@
   <link href="https://kenguo05.github.io/atom.xml" rel="self"/>
   
   <link href="https://kenguo05.github.io/"/>
-  <updated>2021-08-25T10:57:54.109Z</updated>
+  <updated>2021-08-25T13:44:03.076Z</updated>
   <id>https://kenguo05.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java学习笔记-异常</title>
+    <link href="https://kenguo05.github.io/2021/08/25/Java-note-7/"/>
+    <id>https://kenguo05.github.io/2021/08/25/Java-note-7/</id>
+    <published>2021-08-25T11:31:34.000Z</published>
+    <updated>2021-08-25T13:44:03.076Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Exception-和-Error&quot;&gt;&lt;a href=&quot;#Exception-和-Error&quot; class=&quot;headerlink&quot; title=&quot;Exception 和 Error&quot;&gt;&lt;/a&gt;Exception 和</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    
+    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Java学习笔记-面向对象</title>
