@@ -3,11 +3,11 @@
   <title>Kkenの牢骚小站</title>
   
   <subtitle>一般屑学生的辣鸡博客</subtitle>
-  <link href="https://kenguo05.github.io/atom.xml" rel="self"/>
+  <link href="https://www.blogkken.cc/atom.xml" rel="self"/>
   
-  <link href="https://kenguo05.github.io/"/>
+  <link href="https://www.blogkken.cc/"/>
   <updated>2021-08-25T13:44:03.076Z</updated>
-  <id>https://kenguo05.github.io/</id>
+  <id>https://www.blogkken.cc/</id>
   
   <author>
     <name>Kken</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Java学习笔记-异常</title>
-    <link href="https://kenguo05.github.io/2021/08/25/Java-note-7/"/>
-    <id>https://kenguo05.github.io/2021/08/25/Java-note-7/</id>
+    <link href="https://www.blogkken.cc/2021/08/25/Java-note-7/"/>
+    <id>https://www.blogkken.cc/2021/08/25/Java-note-7/</id>
     <published>2021-08-25T11:31:34.000Z</published>
     <updated>2021-08-25T13:44:03.076Z</updated>
     
@@ -34,21 +34,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记-面向对象</title>
-    <link href="https://kenguo05.github.io/2021/08/24/Java-note-6/"/>
-    <id>https://kenguo05.github.io/2021/08/24/Java-note-6/</id>
+    <link href="https://www.blogkken.cc/2021/08/24/Java-note-6/"/>
+    <id>https://www.blogkken.cc/2021/08/24/Java-note-6/</id>
     <published>2021-08-24T12:42:34.000Z</published>
     <updated>2021-08-25T10:57:54.109Z</updated>
     
@@ -63,21 +63,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记-数组</title>
-    <link href="https://kenguo05.github.io/2021/08/24/Java-note-5/"/>
-    <id>https://kenguo05.github.io/2021/08/24/Java-note-5/</id>
+    <link href="https://www.blogkken.cc/2021/08/24/Java-note-5/"/>
+    <id>https://www.blogkken.cc/2021/08/24/Java-note-5/</id>
     <published>2021-08-24T10:09:34.000Z</published>
     <updated>2021-08-24T12:19:01.812Z</updated>
     
@@ -94,21 +94,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记-Java方法</title>
-    <link href="https://kenguo05.github.io/2021/08/24/Java-note-4/"/>
-    <id>https://kenguo05.github.io/2021/08/24/Java-note-4/</id>
+    <link href="https://www.blogkken.cc/2021/08/24/Java-note-4/"/>
+    <id>https://www.blogkken.cc/2021/08/24/Java-note-4/</id>
     <published>2021-08-24T08:20:00.000Z</published>
     <updated>2021-08-24T10:04:38.455Z</updated>
     
@@ -123,21 +123,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记-Java流程控制</title>
-    <link href="https://kenguo05.github.io/2021/08/24/Java-note-3/"/>
-    <id>https://kenguo05.github.io/2021/08/24/Java-note-3/</id>
+    <link href="https://www.blogkken.cc/2021/08/24/Java-note-3/"/>
+    <id>https://www.blogkken.cc/2021/08/24/Java-note-3/</id>
     <published>2021-08-24T04:59:00.000Z</published>
     <updated>2021-08-24T08:26:15.761Z</updated>
     
@@ -152,21 +152,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记-Java基础</title>
-    <link href="https://kenguo05.github.io/2021/08/24/Java-note-2/"/>
-    <id>https://kenguo05.github.io/2021/08/24/Java-note-2/</id>
+    <link href="https://www.blogkken.cc/2021/08/24/Java-note-2/"/>
+    <id>https://www.blogkken.cc/2021/08/24/Java-note-2/</id>
     <published>2021-08-23T18:23:48.000Z</published>
     <updated>2021-08-25T15:55:03.887Z</updated>
     
@@ -183,21 +183,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>Java学习笔记-初识Java</title>
-    <link href="https://kenguo05.github.io/2021/08/24/Java-note-1/"/>
-    <id>https://kenguo05.github.io/2021/08/24/Java-note-1/</id>
+    <link href="https://www.blogkken.cc/2021/08/24/Java-note-1/"/>
+    <id>https://www.blogkken.cc/2021/08/24/Java-note-1/</id>
     <published>2021-08-23T17:05:41.824Z</published>
     <updated>2021-08-24T08:26:00.435Z</updated>
     
@@ -212,21 +212,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Java笔记" scheme="https://kenguo05.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
+    <category term="Java笔记" scheme="https://www.blogkken.cc/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Java" scheme="https://kenguo05.github.io/tags/Java/"/>
+    <category term="Java" scheme="https://www.blogkken.cc/tags/Java/"/>
     
-    <category term="学习" scheme="https://kenguo05.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="学习" scheme="https://www.blogkken.cc/tags/%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>被SSL搞疯了</title>
-    <link href="https://kenguo05.github.io/2021/08/18/SSL-makes-me-crazy-md/"/>
-    <id>https://kenguo05.github.io/2021/08/18/SSL-makes-me-crazy-md/</id>
+    <link href="https://www.blogkken.cc/2021/08/18/SSL-makes-me-crazy-md/"/>
+    <id>https://www.blogkken.cc/2021/08/18/SSL-makes-me-crazy-md/</id>
     <published>2021-08-18T03:51:50.000Z</published>
     <updated>2021-08-21T14:31:28.438Z</updated>
     
@@ -241,19 +241,19 @@
     
     
     
-    <category term="牢骚向" scheme="https://kenguo05.github.io/categories/%E7%89%A2%E9%AA%9A%E5%90%91/"/>
+    <category term="牢骚向" scheme="https://www.blogkken.cc/categories/%E7%89%A2%E9%AA%9A%E5%90%91/"/>
     
     
-    <category term="博客搭建" scheme="https://kenguo05.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="博客搭建" scheme="https://www.blogkken.cc/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
-    <category term="SSL" scheme="https://kenguo05.github.io/tags/SSL/"/>
+    <category term="SSL" scheme="https://www.blogkken.cc/tags/SSL/"/>
     
   </entry>
   
   <entry>
     <title>博客搭建过程与心得</title>
-    <link href="https://kenguo05.github.io/2021/08/05/blog-generating-sharing/"/>
-    <id>https://kenguo05.github.io/2021/08/05/blog-generating-sharing/</id>
+    <link href="https://www.blogkken.cc/2021/08/05/blog-generating-sharing/"/>
+    <id>https://www.blogkken.cc/2021/08/05/blog-generating-sharing/</id>
     <published>2021-08-05T12:23:48.000Z</published>
     <updated>2021-08-21T14:31:18.552Z</updated>
     
@@ -268,21 +268,21 @@
     
     
     
-    <category term="技术向" scheme="https://kenguo05.github.io/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
+    <category term="技术向" scheme="https://www.blogkken.cc/categories/%E6%8A%80%E6%9C%AF%E5%90%91/"/>
     
     
-    <category term="Hexo" scheme="https://kenguo05.github.io/tags/Hexo/"/>
+    <category term="博客搭建" scheme="https://www.blogkken.cc/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
     
-    <category term="博客搭建" scheme="https://kenguo05.github.io/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <category term="Hexo" scheme="https://www.blogkken.cc/tags/Hexo/"/>
     
-    <category term="分享" scheme="https://kenguo05.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    <category term="分享" scheme="https://www.blogkken.cc/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>My first blog</title>
-    <link href="https://kenguo05.github.io/2021/07/28/My-first-blog/"/>
-    <id>https://kenguo05.github.io/2021/07/28/My-first-blog/</id>
+    <link href="https://www.blogkken.cc/2021/07/28/My-first-blog/"/>
+    <id>https://www.blogkken.cc/2021/07/28/My-first-blog/</id>
     <published>2021-07-28T04:00:08.000Z</published>
     <updated>2021-07-29T15:22:48.054Z</updated>
     
@@ -299,17 +299,17 @@
     
     
     
-    <category term="没有内容的测试文章" scheme="https://kenguo05.github.io/categories/%E6%B2%A1%E6%9C%89%E5%86%85%E5%AE%B9%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <category term="没有内容的测试文章" scheme="https://www.blogkken.cc/categories/%E6%B2%A1%E6%9C%89%E5%86%85%E5%AE%B9%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     
     
-    <category term="博客功能测试" scheme="https://kenguo05.github.io/tags/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    <category term="博客功能测试" scheme="https://www.blogkken.cc/tags/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://kenguo05.github.io/2021/07/28/hello-world/"/>
-    <id>https://kenguo05.github.io/2021/07/28/hello-world/</id>
+    <link href="https://www.blogkken.cc/2021/07/28/hello-world/"/>
+    <id>https://www.blogkken.cc/2021/07/28/hello-world/</id>
     <published>2021-07-28T03:55:51.206Z</published>
     <updated>1985-10-26T08:15:00.000Z</updated>
     
