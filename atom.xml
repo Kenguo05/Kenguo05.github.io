@@ -6,7 +6,7 @@
   <link href="https://www.blogkken.cc/atom.xml" rel="self"/>
   
   <link href="https://www.blogkken.cc/"/>
-  <updated>2021-08-28T05:31:01.927Z</updated>
+  <updated>2021-08-28T17:00:32.067Z</updated>
   <id>https://www.blogkken.cc/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://www.blogkken.cc/2021/08/25/Java-note-7/"/>
     <id>https://www.blogkken.cc/2021/08/25/Java-note-7/</id>
     <published>2021-08-25T11:31:34.000Z</published>
-    <updated>2021-08-28T05:31:01.927Z</updated>
+    <updated>2021-08-28T17:00:32.067Z</updated>
     
     
-    <summary type="html">&lt;p&gt;学会预测、发现、捕获、处理异常，保证程序运行的安全性&lt;/p&gt;</summary>
+    <summary type="html">学会预测、发现、捕获、处理异常，保证程序运行的安全性</summary>
     
     
     
@@ -44,16 +44,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-6/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-6/</id>
     <published>2021-08-24T12:42:34.000Z</published>
-    <updated>2021-08-28T05:29:39.793Z</updated>
+    <updated>2021-08-28T17:04:06.397Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Java 真正的精髓， Java 学习的正片，面向对象三大特征&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;封装&lt;/li&gt;
-&lt;li&gt;继承 &lt;/li&gt;
-&lt;li&gt;多态&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以及深刻理解抽象这一内核&lt;/p&gt;</summary>
+    <summary type="html">Java 真正的精髓， Java 学习的正片，面向对象三大特征：封装、继承、多态，以及深刻理解抽象这一内核</summary>
     
     
     
@@ -73,11 +67,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-5/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-5/</id>
     <published>2021-08-24T10:09:34.000Z</published>
-    <updated>2021-08-28T05:26:44.004Z</updated>
+    <updated>2021-08-28T17:03:19.229Z</updated>
     
     
-    <summary type="html">&lt;p&gt;没啥好说的，Java 中数组与 C 语言中大差不差，但 Java 中提供了 for - each 循环遍历数组，&lt;/p&gt;
-&lt;p&gt;而且还有强大的 Arrays 类提供数组的各种方法&lt;/p&gt;</summary>
+    <summary type="html">没啥好说的，Java 中数组与 C 语言中大差不差，但 Java 中提供了 for - each 循环遍历数组，而且还有强大的 Arrays 类提供数组的各种方法</summary>
     
     
     
@@ -97,11 +90,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-4/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-4/</id>
     <published>2021-08-24T08:20:00.000Z</published>
-    <updated>2021-08-28T05:23:31.059Z</updated>
+    <updated>2021-08-28T17:03:04.817Z</updated>
     
     
-    <summary type="html">&lt;p&gt;Java 中的方法类似 C 语言中的函数，定义、调用等流程都基本相同。&lt;/p&gt;
-&lt;p&gt;Java 是值传递的，可以利用 C 语言的指针解释许多貌似是引用传递的现象&lt;/p&gt;</summary>
+    <summary type="html">Java 中的方法类似 C 语言中的函数，定义、调用等流程都基本相同。Java 是值传递的，可以利用 C 语言的指针解释许多貌似是引用传递的现象</summary>
     
     
     
@@ -121,11 +113,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-3/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-3/</id>
     <published>2021-08-24T04:59:00.000Z</published>
-    <updated>2021-08-28T05:19:41.477Z</updated>
+    <updated>2021-08-28T17:02:47.811Z</updated>
     
     
-    <summary type="html">&lt;p&gt;基本所有语言都要学习的流程控制，包括了顺序结构、选择结构和循环结构&lt;/p&gt;
-&lt;p&gt;学完这个理论上就可以写点简单的程序玩了&lt;/p&gt;</summary>
+    <summary type="html">基本所有语言都要学习的流程控制，包括了顺序结构、选择结构和循环结构，学完这个理论上就可以写点简单的程序玩了</summary>
     
     
     
@@ -145,11 +136,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-2/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-2/</id>
     <published>2021-08-23T18:23:48.000Z</published>
-    <updated>2021-08-28T05:17:51.081Z</updated>
+    <updated>2021-08-28T17:02:23.449Z</updated>
     
     
-    <summary type="html">&lt;p&gt;学习 Java 基本的语法知识，比如注释、关键字、运算符blablablabla……&lt;/p&gt;
-&lt;p&gt;有其他语言基础学起来果然轻松不少&lt;/p&gt;</summary>
+    <summary type="html">学习 Java 基本的语法知识，比如注释、关键字、运算符blablablabla......有其他语言基础学起来果然轻松不少</summary>
     
     
     
@@ -169,10 +159,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-1/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-1/</id>
     <published>2021-08-23T17:05:41.824Z</published>
-    <updated>2021-08-28T05:15:32.934Z</updated>
+    <updated>2021-08-28T17:01:53.191Z</updated>
     
     
-    <summary type="html">&lt;p&gt;从零开始学习 Java&lt;/p&gt;</summary>
+    <summary type="html">从零开始学习 Java</summary>
     
     
     
