@@ -2,7 +2,7 @@
 
 博客框架：[Hexo]((https://hexo.io/zh-cn/))
 
-博客主题：[NexT](https://github.com/theme-next/hexo-theme-next)
+博客主题：[Butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
 
 > 这里安利一波这个主题，很好康
 

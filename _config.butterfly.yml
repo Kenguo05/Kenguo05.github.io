@@ -85,8 +85,8 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: /img/avatar.png
-  effect: false
+  img: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/avatar.png
+  effect: true
 
 # Disable all banner image
 disable_top_img:
