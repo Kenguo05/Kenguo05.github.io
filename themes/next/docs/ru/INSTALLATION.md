@@ -3,19 +3,18 @@
 <h2 align="center">Шаг 1 &rarr; Идём в директорию Hexo</h2>
 
 Меняем каталог на **корневой hexo**. Там должны находиться `node_modules`, `source`, `themes` и другие папки:
-
-```sh
-$ cd hexo
-$ ls
-_config.yml  node_modules  package.json  public  scaffolds  source  themes
-```
+   ```sh
+   $ cd hexo
+   $ ls
+   _config.yml  node_modules  package.json  public  scaffolds  source  themes
+   ```
 
 <h2 align="center">Шаг 2 &rarr; Скачиваем NexT</h2>
 
-<p align="center">Скачиваем тему с GitHub.<br>
+<p align="center">Скачиваем тему с GitHub.</br>
 Имеются <b>3 способа</b> как зделать это, нужно <b>выбрать только 1</b> из них.</p>
 
-### Способ 1: Скачиваем [последнюю версию релиза][releases-latest-url]
+### Способ 1: Скачиваем [последнюю версию релиза][releases-latest-url]</h3>
 
    В большинстве случаев **стабильна**. Рекомендуется для начинающих пользователей.
 
@@ -90,7 +89,7 @@ _config.yml  node_modules  package.json  public  scaffolds  source  themes
      $ git checkout tags/v6.0.1
      Note: checking out 'tags/v6.0.1'.
      …
-     HEAD is now at da9cdd2... Release v6.0.1
+     HEAD now on 1f72f68... CSS: Remove global list-style setting of ul
      ```
 
      И если вы хотите переключиться обратно на [мастер-ветку][commits-url], вводим следующее:
@@ -106,6 +105,20 @@ _config.yml  node_modules  package.json  public  scaffolds  source  themes
 ```yml
 theme: next
 ```
+
+<h1 align="center">Плагины</h1>
+
+В конфиге NexT'а теперь можно найти зависимости на каждый модуль, который был вынесен во внешние репозитории, которые могут быть найдены по [ссылке основной организации](https://github.com/theme-next).
+
+Например, Вы хотите использовать `fancybox` для своего сайта. Открываем конфиг NexT'а и находим:
+
+```yml
+# Fancybox
+# Dependencies: https://github.com/theme-next/theme-next-fancybox
+fancybox: false
+```
+
+Затем включаем параметр `fancybox` и переходим по ссылке «Dependencies» с дальнейшеми инструкциями по установке этого модуля.
 
 [download-latest-url]: https://github.com/theme-next/hexo-theme-next/archive/master.zip
 [releases-latest-url]: https://github.com/theme-next/hexo-theme-next/releases/latest

@@ -7,6 +7,8 @@ tags:
 categories:
   - 学习笔记
   - Java笔记
+description: 从零开始学习 Java
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg
 ---
 
 ## Java 特性与优势

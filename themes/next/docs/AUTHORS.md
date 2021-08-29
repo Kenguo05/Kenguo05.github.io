@@ -80,8 +80,8 @@ And best contributors from initially repository:
 - **LEAFERx**: [NeedMoreShare2](https://github.com/iissnan/hexo-theme-next/pull/1913)
 - **aimingoo & LEAFERx**: [Gitment supported with Mint](https://github.com/iissnan/hexo-theme-next/pull/1919)
 - **LeviDing**: [Fix the bug of Gitment](https://github.com/iissnan/hexo-theme-next/pull/1944)
-- **maple3142**: [Firestore visitor counter](https://github.com/iissnan/hexo-theme-next/pull/1978)
+- **maple**: [Firestore visitor counter](https://github.com/iissnan/hexo-theme-next/pull/1978)
 
 It lives on as an open source project with many contributors, a self updating list is [here](https://github.com/theme-next/hexo-theme-next/graphs/contributors).
 
-P.S. If you did some useful pulls/commits in original repository and you are not in the list, let us know and you will be added here.
+P.S. If you was do some useful pulls/commits in original repository and you are not in list, let me know and you will be added here.

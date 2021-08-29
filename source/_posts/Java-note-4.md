@@ -7,6 +7,8 @@ tags:
 categories:
   - 学习笔记
   - Java笔记
+description: Java 中的方法类似 C 语言中的函数，定义、调用等流程都基本相同。Java 是值传递的，可以利用 C 语言的指针解释许多貌似是引用传递的现象
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg
 ---
 
 ## 什么是方法

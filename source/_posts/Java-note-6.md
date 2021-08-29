@@ -7,6 +7,8 @@ tags:
 categories:
   - 学习笔记
   - Java笔记
+description: Java 真正的精髓， Java 学习的正片，面向对象三大特征：封装、继承、多态，以及深刻理解抽象这一内核
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg
 ---
 
 ## 面向对象

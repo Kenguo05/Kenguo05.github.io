@@ -7,6 +7,8 @@ tags:
 categories:
   - 学习笔记
   - Java笔记
+description: 没啥好说的，Java 中数组与 C 语言中大差不差，但 Java 中提供了 for - each 循环遍历数组，而且还有强大的 Arrays 类提供数组的各种方法
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg
 ---
 
 ## 数组的声明创建

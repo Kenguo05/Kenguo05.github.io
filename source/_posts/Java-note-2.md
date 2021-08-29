@@ -7,6 +7,8 @@ tags:
 categories:
   - 学习笔记
   - Java笔记
+description: 学习 Java 基本的语法知识，比如注释、关键字、运算符blablablabla......有其他语言基础学起来果然轻松不少
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg
 ---
 
 ## 注释

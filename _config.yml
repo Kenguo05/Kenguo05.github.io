@@ -98,7 +98,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -122,7 +122,7 @@ feed:
   template:
 
 search:
-  path: search.json
+  path: search.xml
   field: post
-  content: false
-  format: html
+  content: true
+  template: ./search.xml

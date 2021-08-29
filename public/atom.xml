@@ -6,7 +6,7 @@
   <link href="https://www.blogkken.cc/atom.xml" rel="self"/>
   
   <link href="https://www.blogkken.cc/"/>
-  <updated>2021-08-25T13:44:03.076Z</updated>
+  <updated>2021-08-28T17:00:32.067Z</updated>
   <id>https://www.blogkken.cc/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://www.blogkken.cc/2021/08/25/Java-note-7/"/>
     <id>https://www.blogkken.cc/2021/08/25/Java-note-7/</id>
     <published>2021-08-25T11:31:34.000Z</published>
-    <updated>2021-08-25T13:44:03.076Z</updated>
+    <updated>2021-08-28T17:00:32.067Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Exception-和-Error&quot;&gt;&lt;a href=&quot;#Exception-和-Error&quot; class=&quot;headerlink&quot; title=&quot;Exception 和 Error&quot;&gt;&lt;/a&gt;Exception 和</summary>
-        
-      
+    <summary type="html">学会预测、发现、捕获、处理异常，保证程序运行的安全性</summary>
     
     
     
@@ -50,16 +44,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-6/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-6/</id>
     <published>2021-08-24T12:42:34.000Z</published>
-    <updated>2021-08-25T10:57:54.109Z</updated>
+    <updated>2021-08-28T17:04:06.397Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;面向对象&quot;&gt;&lt;a href=&quot;#面向对象&quot; class=&quot;headerlink&quot; title=&quot;面向对象&quot;&gt;&lt;/a&gt;面向对象&lt;/h2&gt;&lt;p&gt;Object-Oriented Programming,</summary>
-        
-      
+    <summary type="html">Java 真正的精髓， Java 学习的正片，面向对象三大特征：封装、继承、多态，以及深刻理解抽象这一内核</summary>
     
     
     
@@ -79,18 +67,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-5/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-5/</id>
     <published>2021-08-24T10:09:34.000Z</published>
-    <updated>2021-08-24T12:19:01.812Z</updated>
+    <updated>2021-08-28T17:03:19.229Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;数组的声明创建&quot;&gt;&lt;a href=&quot;#数组的声明创建&quot; class=&quot;headerlink&quot; title=&quot;数组的声明创建&quot;&gt;&lt;/a&gt;数组的声明创建&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;声明&lt;/p&gt;
-&lt;pre class=&quot;language-java&quot;</summary>
-        
-      
+    <summary type="html">没啥好说的，Java 中数组与 C 语言中大差不差，但 Java 中提供了 for - each 循环遍历数组，而且还有强大的 Arrays 类提供数组的各种方法</summary>
     
     
     
@@ -110,16 +90,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-4/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-4/</id>
     <published>2021-08-24T08:20:00.000Z</published>
-    <updated>2021-08-24T10:04:38.455Z</updated>
+    <updated>2021-08-28T17:03:04.817Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什么是方法&quot;&gt;&lt;a href=&quot;#什么是方法&quot; class=&quot;headerlink&quot; title=&quot;什么是方法&quot;&gt;&lt;/a&gt;什么是方法&lt;/h2&gt;&lt;p&gt;Java</summary>
-        
-      
+    <summary type="html">Java 中的方法类似 C 语言中的函数，定义、调用等流程都基本相同。Java 是值传递的，可以利用 C 语言的指针解释许多貌似是引用传递的现象</summary>
     
     
     
@@ -139,16 +113,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-3/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-3/</id>
     <published>2021-08-24T04:59:00.000Z</published>
-    <updated>2021-08-24T08:26:15.761Z</updated>
+    <updated>2021-08-28T17:02:47.811Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Scanner-对象&quot;&gt;&lt;a href=&quot;#Scanner-对象&quot; class=&quot;headerlink&quot; title=&quot;Scanner 对象&quot;&gt;&lt;/a&gt;Scanner 对象&lt;/h2&gt;&lt;p&gt;Java5 在</summary>
-        
-      
+    <summary type="html">基本所有语言都要学习的流程控制，包括了顺序结构、选择结构和循环结构，学完这个理论上就可以写点简单的程序玩了</summary>
     
     
     
@@ -168,18 +136,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-2/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-2/</id>
     <published>2021-08-23T18:23:48.000Z</published>
-    <updated>2021-08-25T15:55:03.887Z</updated>
+    <updated>2021-08-28T17:02:23.449Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;注释&quot;&gt;&lt;a href=&quot;#注释&quot; class=&quot;headerlink&quot; title=&quot;注释&quot;&gt;&lt;/a&gt;注释&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;单行注释&lt;/p&gt;
-&lt;pre class=&quot;language-java&quot;</summary>
-        
-      
+    <summary type="html">学习 Java 基本的语法知识，比如注释、关键字、运算符blablablabla......有其他语言基础学起来果然轻松不少</summary>
     
     
     
@@ -199,16 +159,10 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-1/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-1/</id>
     <published>2021-08-23T17:05:41.824Z</published>
-    <updated>2021-08-24T08:26:00.435Z</updated>
+    <updated>2021-08-28T17:01:53.191Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Java-特性与优势&quot;&gt;&lt;a href=&quot;#Java-特性与优势&quot; class=&quot;headerlink&quot; title=&quot;Java 特性与优势&quot;&gt;&lt;/a&gt;Java</summary>
-        
-      
+    <summary type="html">从零开始学习 Java</summary>
     
     
     
@@ -228,16 +182,10 @@
     <link href="https://www.blogkken.cc/2021/08/18/SSL-makes-me-crazy-md/"/>
     <id>https://www.blogkken.cc/2021/08/18/SSL-makes-me-crazy-md/</id>
     <published>2021-08-18T03:51:50.000Z</published>
-    <updated>2021-08-21T14:31:28.438Z</updated>
+    <updated>2021-08-28T05:14:10.651Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;SOS要死了要死了！！&quot;&gt;&lt;a href=&quot;#SOS要死了要死了！！&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;折腾云服务器真的要把我搞疯了QAQ！！！&lt;/p&gt;</summary>
     
     
     
@@ -255,16 +203,10 @@
     <link href="https://www.blogkken.cc/2021/08/05/blog-generating-sharing/"/>
     <id>https://www.blogkken.cc/2021/08/05/blog-generating-sharing/</id>
     <published>2021-08-05T12:23:48.000Z</published>
-    <updated>2021-08-21T14:31:18.552Z</updated>
+    <updated>2021-08-28T05:12:24.390Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;第一次自己搭建博客&quot;&gt;&lt;a href=&quot;#第一次自己搭建博客&quot; class=&quot;headerlink&quot;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;记录自己第一次博客搭建~~&lt;/p&gt;</summary>
     
     
     
@@ -276,54 +218,6 @@
     <category term="Hexo" scheme="https://www.blogkken.cc/tags/Hexo/"/>
     
     <category term="分享" scheme="https://www.blogkken.cc/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My first blog</title>
-    <link href="https://www.blogkken.cc/2021/07/28/My-first-blog/"/>
-    <id>https://www.blogkken.cc/2021/07/28/My-first-blog/</id>
-    <published>2021-07-28T04:00:08.000Z</published>
-    <updated>2021-07-29T15:22:48.054Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;测试用写着玩&quot;&gt;&lt;a href=&quot;#测试用写着玩&quot; class=&quot;headerlink&quot; title=&quot;测试用写着玩&quot;&gt;&lt;/a&gt;测试用写着玩&lt;/h2&gt;&lt;p&gt;没有内容&lt;/p&gt;
-&lt;hr&gt;
-&lt;pre class=&quot;language-java&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="没有内容的测试文章" scheme="https://www.blogkken.cc/categories/%E6%B2%A1%E6%9C%89%E5%86%85%E5%AE%B9%E7%9A%84%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    
-    
-    <category term="博客功能测试" scheme="https://www.blogkken.cc/tags/%E5%8D%9A%E5%AE%A2%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://www.blogkken.cc/2021/07/28/hello-world/"/>
-    <id>https://www.blogkken.cc/2021/07/28/hello-world/</id>
-    <published>2021-07-28T03:55:51.206Z</published>
-    <updated>1985-10-26T08:15:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   

@@ -7,6 +7,8 @@ tags:
 categories:
   - 学习笔记
   - Java笔记
+description: 基本所有语言都要学习的流程控制，包括了顺序结构、选择结构和循环结构，学完这个理论上就可以写点简单的程序玩了
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg
 ---
 
 ## Scanner 对象
