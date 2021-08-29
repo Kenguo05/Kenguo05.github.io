@@ -1,116 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java学习笔记-Java流程控制</title>
-    <url>/2021/08/24/Java-note-3/</url>
-    <content><![CDATA[<h2 id="Scanner-对象"><a href="#Scanner-对象" class="headerlink" title="Scanner 对象"></a>Scanner 对象</h2><p>Java5 在 <code>java.util.Scanner</code> 中提供了 <code>Scanner</code> 类，可以获取用户输入，使用之前要导入这个包</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span><span class="token punctuation">;</span></code></pre>
-
-<p>基本语法</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//创建一个名叫 s 的 Scanner 对象用于获取输入</span>
-<span class="token class-name">Scanner</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// 将接收到的输入赋给变量str</span>
-<span class="token class-name">String</span> str <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
-<p>通过<code>Scanner</code>类的<code>next()</code>与<code>nextLine()</code>方法获取输入的字符串，读取前一般需要用<code>hasNext()</code>与<code>hasNextLine()</code>判断是否还有输入数据</p>
-<ul>
-<li><p><code>next()</code></p>
-<ol>
-<li>一定要读取到有效字符才可以结束输入</li>
-<li>对输入有效字符之前遇到空白，<code>next()</code>方法会将其自动去掉</li>
-<li>只有输入有效字符后才将其后面输入的空白作为分隔符或结束符</li>
-<li><strong><code>next()</code>不能得到带有空格的字符串</strong></li>
-</ol>
-</li>
-<li><p><code>nextLine()</code></p>
-<ol>
-<li>以<code>Enter</code>为结束符，也就是说<code>nextLine()</code>返回的是输入回车之前的字符</li>
-<li>可以得到带有空格的字符串</li>
-</ol>
-</li>
+    <title>Java学习笔记-初识Java</title>
+    <url>/2021/08/24/Java-note-1/</url>
+    <content><![CDATA[<h2 id="Java-特性与优势"><a href="#Java-特性与优势" class="headerlink" title="Java 特性与优势"></a>Java 特性与优势</h2><ul>
+<li>简单性</li>
+<li>面向对象</li>
+<li>可移植性（<strong>跨平台</strong>）：Write once, run anywhere.</li>
+<li>高性能</li>
+<li>分布式</li>
+<li>动态性：反射机制</li>
+<li>多线程</li>
+<li>安全性</li>
+<li>健壮性</li>
+</ul>
+<h2 id="Java-三大版本"><a href="#Java-三大版本" class="headerlink" title="Java 三大版本"></a>Java 三大版本</h2><ul>
+<li><code>JavaSE</code>：标准版（桌面程序，控制台开发……）</li>
+<li><code>JavaME</code>：嵌入式开发（手机，小家电……）</li>
+<li><code>JavaEE</code>：企业级开发（web端，服务器开发……）</li>
+</ul>
+<h2 id="JDK、JRE、JVM-初识"><a href="#JDK、JRE、JVM-初识" class="headerlink" title="JDK、JRE、JVM 初识"></a>JDK、JRE、JVM 初识</h2><ul>
+<li><code>JDK</code>：Java Development Kit</li>
+<li><code>JRE</code>：Java Runtime Environment</li>
+<li><code>JVM</code>：Java Virtual Machine</li>
 </ul>
 <blockquote>
-<p>当需要输入整数和小数时，可以使用<code>nextInt()</code>和<code>nextFloat()</code>等方法，其他数据类型依次类推。</p>
+<p><code>JRE</code> 扩充了一些开发工具后成为<code> JDK</code></p>
+<p><strong>JVM</strong> 是 Java 跨平台的核心</p>
 </blockquote>
-<h2 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h2><p>最基本的结构，最简单的结构，语句从上到下依次执行</p>
-<p><strong>是所有算法都会用到的结构</strong></p>
-<h2 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h2><h3 id="if-单选择结构"><a href="#if-单选择结构" class="headerlink" title="if 单选择结构"></a>if 单选择结构</h3><p>语法</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-	<span class="token comment">//执行语句</span>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p><code>HelloWord</code> 的 <code>Java</code>实现</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span></code></pre>
 
-<h3 id="if-双选择结构"><a href="#if-双选择结构" class="headerlink" title="if 双选择结构"></a>if 双选择结构</h3><p>语法</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<p>在命令行窗口中运行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">javac HelloWorld.java
+# 在对应目录下运行cmd，将会生成一个.class文件
+java HelloWorld
+# 这里不用加后缀</code></pre>
 
-<h3 id="if-多选择结构"><a href="#if-多选择结构" class="headerlink" title="if 多选择结构"></a>if 多选择结构</h3><p>语法</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span></code></pre>
+<p>运行成功后将打印</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">Hello, World!</code></pre>
 
-<h3 id="if-嵌套结构"><a href="#if-嵌套结构" class="headerlink" title="if 嵌套结构"></a>if 嵌套结构</h3><p>语法</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">// 执行语句</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token comment">// 执行语句</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<h3 id="switch-选择结构"><a href="#switch-选择结构" class="headerlink" title="switch 选择结构"></a>switch 选择结构</h3><p>语法</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">case</span> value<span class="token operator">:</span>
-        <span class="token comment">//语句</span>
-        <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//可选</span>
-    <span class="token keyword">case</span> value<span class="token operator">:</span>
-        <span class="token comment">//语句</span>
-        <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//可选</span>
-    <span class="token keyword">default</span><span class="token operator">:</span> <span class="token comment">//可选</span>
-        <span class="token comment">// 语句</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<p><strong>自 JavaSE 7 开始支持字符串比较</strong></p>
-<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p>结构</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 执行语句</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<p>当布尔表达式为<code>true</code>是进入循环执行语句</p>
-<p><strong>大多数情况需要循环停止下来，需要一个让表达式失效的方式来结束循环</strong></p>
-<h3 id="do…while-循环"><a href="#do…while-循环" class="headerlink" title="do…while 循环"></a>do…while 循环</h3><p>结构</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span> <span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span></code></pre>
-
-<p>de…while 循环至少执行一次</p>
-<h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><p>结构</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>初始化<span class="token punctuation">;</span> 布尔表达式<span class="token punctuation">;</span> 更新<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// 执行语句</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<h3 id="增强-for-循环"><a href="#增强-for-循环" class="headerlink" title="增强 for 循环"></a>增强 for 循环</h3><p>主要用于遍历数组，JavaSE 5 引入</p>
-<p>结构</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>声明语句 <span class="token operator">:</span> 表达式<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token comment">//执行语句</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<blockquote>
-<p>声明语句：声明新的局部变量，该变量的类型必须和数组元素类型匹配。其作用域限定在循环语句块，其值与此时的数组元素的值相等</p>
-<p>表达式：表达式是要访问的数组名，或者是返回值为数组的方法</p>
-</blockquote>
-<h2 id="break-continue"><a href="#break-continue" class="headerlink" title="break continue"></a>break continue</h2><h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p>用于<strong>强制</strong>退出循环，或在<code>switch</code>语句中防止<code>case</code>穿透</p>
-<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p>用于终止当次循环，但仍会执行下一次循环</p>
-<blockquote>
-<p>Java 没有<code>goto</code>，但可以通过<code>label</code>标签和<code>continue</code>&amp;<code>break</code>实现</p>
-</blockquote>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -282,49 +215,116 @@
       </tags>
   </entry>
   <entry>
-    <title>Java学习笔记-初识Java</title>
-    <url>/2021/08/24/Java-note-1/</url>
-    <content><![CDATA[<h2 id="Java-特性与优势"><a href="#Java-特性与优势" class="headerlink" title="Java 特性与优势"></a>Java 特性与优势</h2><ul>
-<li>简单性</li>
-<li>面向对象</li>
-<li>可移植性（<strong>跨平台</strong>）：Write once, run anywhere.</li>
-<li>高性能</li>
-<li>分布式</li>
-<li>动态性：反射机制</li>
-<li>多线程</li>
-<li>安全性</li>
-<li>健壮性</li>
-</ul>
-<h2 id="Java-三大版本"><a href="#Java-三大版本" class="headerlink" title="Java 三大版本"></a>Java 三大版本</h2><ul>
-<li><code>JavaSE</code>：标准版（桌面程序，控制台开发……）</li>
-<li><code>JavaME</code>：嵌入式开发（手机，小家电……）</li>
-<li><code>JavaEE</code>：企业级开发（web端，服务器开发……）</li>
-</ul>
-<h2 id="JDK、JRE、JVM-初识"><a href="#JDK、JRE、JVM-初识" class="headerlink" title="JDK、JRE、JVM 初识"></a>JDK、JRE、JVM 初识</h2><ul>
-<li><code>JDK</code>：Java Development Kit</li>
-<li><code>JRE</code>：Java Runtime Environment</li>
-<li><code>JVM</code>：Java Virtual Machine</li>
+    <title>Java学习笔记-Java流程控制</title>
+    <url>/2021/08/24/Java-note-3/</url>
+    <content><![CDATA[<h2 id="Scanner-对象"><a href="#Scanner-对象" class="headerlink" title="Scanner 对象"></a>Scanner 对象</h2><p>Java5 在 <code>java.util.Scanner</code> 中提供了 <code>Scanner</code> 类，可以获取用户输入，使用之前要导入这个包</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">Scanner</span><span class="token punctuation">;</span></code></pre>
+
+<p>基本语法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token comment">//创建一个名叫 s 的 Scanner 对象用于获取输入</span>
+<span class="token class-name">Scanner</span> s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Scanner</span><span class="token punctuation">(</span><span class="token class-name">System</span><span class="token punctuation">.</span>in<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 将接收到的输入赋给变量str</span>
+<span class="token class-name">String</span> str <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+<p>通过<code>Scanner</code>类的<code>next()</code>与<code>nextLine()</code>方法获取输入的字符串，读取前一般需要用<code>hasNext()</code>与<code>hasNextLine()</code>判断是否还有输入数据</p>
+<ul>
+<li><p><code>next()</code></p>
+<ol>
+<li>一定要读取到有效字符才可以结束输入</li>
+<li>对输入有效字符之前遇到空白，<code>next()</code>方法会将其自动去掉</li>
+<li>只有输入有效字符后才将其后面输入的空白作为分隔符或结束符</li>
+<li><strong><code>next()</code>不能得到带有空格的字符串</strong></li>
+</ol>
+</li>
+<li><p><code>nextLine()</code></p>
+<ol>
+<li>以<code>Enter</code>为结束符，也就是说<code>nextLine()</code>返回的是输入回车之前的字符</li>
+<li>可以得到带有空格的字符串</li>
+</ol>
+</li>
 </ul>
 <blockquote>
-<p><code>JRE</code> 扩充了一些开发工具后成为<code> JDK</code></p>
-<p><strong>JVM</strong> 是 Java 跨平台的核心</p>
+<p>当需要输入整数和小数时，可以使用<code>nextInt()</code>和<code>nextFloat()</code>等方法，其他数据类型依次类推。</p>
 </blockquote>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p><code>HelloWord</code> 的 <code>Java</code>实现</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">&#123;</span>
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
+<h2 id="顺序结构"><a href="#顺序结构" class="headerlink" title="顺序结构"></a>顺序结构</h2><p>最基本的结构，最简单的结构，语句从上到下依次执行</p>
+<p><strong>是所有算法都会用到的结构</strong></p>
+<h2 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h2><h3 id="if-单选择结构"><a href="#if-单选择结构" class="headerlink" title="if 单选择结构"></a>if 单选择结构</h3><p>语法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+	<span class="token comment">//执行语句</span>
 <span class="token punctuation">&#125;</span></code></pre>
 
-<p>在命令行窗口中运行命令</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">javac HelloWorld.java
-# 在对应目录下运行cmd，将会生成一个.class文件
-java HelloWorld
-# 这里不用加后缀</code></pre>
+<h3 id="if-双选择结构"><a href="#if-双选择结构" class="headerlink" title="if 双选择结构"></a>if 双选择结构</h3><p>语法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
-<p>运行成功后将打印</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">Hello, World!</code></pre>
+<h3 id="if-多选择结构"><a href="#if-多选择结构" class="headerlink" title="if 多选择结构"></a>if 多选择结构</h3><p>语法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
+<h3 id="if-嵌套结构"><a href="#if-嵌套结构" class="headerlink" title="if 嵌套结构"></a>if 嵌套结构</h3><p>语法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">// 执行语句</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>布尔表达式<span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token comment">// 执行语句</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<h3 id="switch-选择结构"><a href="#switch-选择结构" class="headerlink" title="switch 选择结构"></a>switch 选择结构</h3><p>语法</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">switch</span><span class="token punctuation">(</span>expression<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">case</span> value<span class="token operator">:</span>
+        <span class="token comment">//语句</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//可选</span>
+    <span class="token keyword">case</span> value<span class="token operator">:</span>
+        <span class="token comment">//语句</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span> <span class="token comment">//可选</span>
+    <span class="token keyword">default</span><span class="token operator">:</span> <span class="token comment">//可选</span>
+        <span class="token comment">// 语句</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p><strong>自 JavaSE 7 开始支持字符串比较</strong></p>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><h3 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h3><p>结构</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 执行语句</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>当布尔表达式为<code>true</code>是进入循环执行语句</p>
+<p><strong>大多数情况需要循环停止下来，需要一个让表达式失效的方式来结束循环</strong></p>
+<h3 id="do…while-循环"><a href="#do…while-循环" class="headerlink" title="do…while 循环"></a>do…while 循环</h3><p>结构</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">do</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">while</span><span class="token punctuation">(</span>布尔表达式<span class="token punctuation">)</span></code></pre>
+
+<p>de…while 循环至少执行一次</p>
+<h3 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h3><p>结构</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>初始化<span class="token punctuation">;</span> 布尔表达式<span class="token punctuation">;</span> 更新<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 执行语句</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<h3 id="增强-for-循环"><a href="#增强-for-循环" class="headerlink" title="增强 for 循环"></a>增强 for 循环</h3><p>主要用于遍历数组，JavaSE 5 引入</p>
+<p>结构</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">for</span><span class="token punctuation">(</span>声明语句 <span class="token operator">:</span> 表达式<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//执行语句</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<blockquote>
+<p>声明语句：声明新的局部变量，该变量的类型必须和数组元素类型匹配。其作用域限定在循环语句块，其值与此时的数组元素的值相等</p>
+<p>表达式：表达式是要访问的数组名，或者是返回值为数组的方法</p>
+</blockquote>
+<h2 id="break-continue"><a href="#break-continue" class="headerlink" title="break continue"></a>break continue</h2><h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p>用于<strong>强制</strong>退出循环，或在<code>switch</code>语句中防止<code>case</code>穿透</p>
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p>用于终止当次循环，但仍会执行下一次循环</p>
+<blockquote>
+<p>Java 没有<code>goto</code>，但可以通过<code>label</code>标签和<code>continue</code>&amp;<code>break</code>实现</p>
+</blockquote>
 ]]></content>
       <categories>
         <category>学习笔记</category>
