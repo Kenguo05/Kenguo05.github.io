@@ -6,6 +6,7 @@ tags:
   - SSL
 categories:
   - 牢骚向
+cover: https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/somethingnotgood.jpg
 ---
 
 折腾云服务器真的要把我搞疯了QAQ！！！
