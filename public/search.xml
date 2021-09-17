@@ -1,48 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Java学习笔记-初识Java</title>
-    <url>/2021/08/24/Java-note-1/</url>
-    <content><![CDATA[<h2 id="Java-特性与优势"><a href="#Java-特性与优势" class="headerlink" title="Java 特性与优势"></a>Java 特性与优势</h2><ul>
-<li>简单性</li>
-<li>面向对象</li>
-<li>可移植性（<strong>跨平台</strong>）：Write once, run anywhere.</li>
-<li>高性能</li>
-<li>分布式</li>
-<li>动态性：反射机制</li>
-<li>多线程</li>
-<li>安全性</li>
-<li>健壮性</li>
-</ul>
-<h2 id="Java-三大版本"><a href="#Java-三大版本" class="headerlink" title="Java 三大版本"></a>Java 三大版本</h2><ul>
-<li><code>JavaSE</code>：标准版（桌面程序，控制台开发……）</li>
-<li><code>JavaME</code>：嵌入式开发（手机，小家电……）</li>
-<li><code>JavaEE</code>：企业级开发（web端，服务器开发……）</li>
-</ul>
-<h2 id="JDK、JRE、JVM-初识"><a href="#JDK、JRE、JVM-初识" class="headerlink" title="JDK、JRE、JVM 初识"></a>JDK、JRE、JVM 初识</h2><ul>
-<li><code>JDK</code>：Java Development Kit</li>
-<li><code>JRE</code>：Java Runtime Environment</li>
-<li><code>JVM</code>：Java Virtual Machine</li>
+    <title>Java学习笔记-Java方法</title>
+    <url>/2021/08/24/Java-note-4/</url>
+    <content><![CDATA[<h2 id="什么是方法"><a href="#什么是方法" class="headerlink" title="什么是方法"></a>什么是方法</h2><p>Java 方法是语句集合，它们在一起执行一个功能</p>
+<ul>
+<li>方法是解决一类问题的步骤的有序组合</li>
+<li>方法包含于类或对象中</li>
+<li>方法在程序中被创建，在其他地方被引用</li>
 </ul>
 <blockquote>
-<p><code>JRE</code> 扩充了一些开发工具后成为<code> JDK</code></p>
-<p><strong>JVM</strong> 是 Java 跨平台的核心</p>
+<p>设计方法的原则：最好保持方法的原子性，即<strong>一个方法只完成一个功能</strong></p>
 </blockquote>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p><code>HelloWord</code> 的 <code>Java</code>实现</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">&#123;</span>
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
+<h2 id="方法的定义与调用"><a href="#方法的定义与调用" class="headerlink" title="方法的定义与调用"></a>方法的定义与调用</h2><h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><p>类似于C语言中的函数</p>
+<p><strong>方法包括一个方法头与一个方法体：</strong></p>
+<ul>
+<li><p>方法头：</p>
+<ul>
+<li>修饰符：可选，告诉编译器如何调用该方法，定义了该方法的访问类型</li>
+<li>返回值类型：方法可能会返回值。返回值类型是方法返回值的数据类型，若方法没有返回值，则返回值类型为<code>void</code></li>
+<li>方法名：是方法的实际名称，与参数表共同构成方法签名</li>
+<li>参数表：方法被调用时，将值传递给参数，这个值被称为实际参数或变量（实参），而用于接收外界输入的数据被称为形式参数（形参）；参数表指方法的参数类型、顺序和参数个数。方法可以不含任何参数<ul>
+<li>形式参数：在方法被调用时用于接收外界输入的数据。</li>
+<li>实际参数：调用方法时实际传递给方法的数据</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>方法体：方法体包含具体的执行语句，定义该方法的功能</p>
+</li>
+</ul>
+<pre class="language-java" data-language="java"><code class="language-java">修饰符 返回值类型 方法名<span class="token punctuation">(</span>参数类型 参数名<span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">//方法头</span>
+    <span class="token comment">/*
+      方法体
+    */</span>
+    <span class="token keyword">return</span> 返回值<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span></code></pre>
 
-<p>在命令行窗口中运行命令</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">javac HelloWorld.java
-# 在对应目录下运行cmd，将会生成一个.class文件
-java HelloWorld
-# 这里不用加后缀</code></pre>
+<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><p>格式：<code>对象名.方法名(实参表)</code></p>
+<blockquote>
+<p>值传递与引用传递：</p>
+<p>Java是值传递的，即调用方法时，将实参的值拷贝给形参，对形参的值进行更改时，实参的值不会发生改变，<strong>注意：这里的“值”是指这个参数的值，它可以是数值，也可以是地址</strong>，因此在考虑调用方法后的值变化问题需要具体分析，可以指针和内存管理角度去理解（C语言还是有用）</p>
+</blockquote>
+<h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>重载就是一个类中，有相同的方法名称，但形参不同的方法</p>
+<p>规则：</p>
+<ul>
+<li>方法名称相同</li>
+<li>参数表必须不同（个数不同、或类型不同、或参数排列顺序不同等）</li>
+<li>方法的返回类型可以相同也可以不同</li>
+<li>仅仅返回类型不同不足以成为方法的重载</li>
+</ul>
+<h2 id="命令行传参"><a href="#命令行传参" class="headerlink" title="命令行传参"></a>命令行传参</h2><p>与C语言类似，在运行时通过给<code>main</code>方法传递参数来实现相应的功能</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">javac 文件名.java
+java 包名.类名 参数
+# 注意：运行时一定要回退至根目录下通过包名来找到类</code></pre>
 
-<p>运行成功后将打印</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">Hello, World!</code></pre>
+<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>JDK 1.5 开始支持传递同类型可变参数给一个方法</p>
+<p>在方法的声明中。在指定参数类型后加上一个省略号（…）</p>
+<p>一个方法中只能指定一个可变参数，且必须时方法的最后一个参数</p>
+<blockquote>
+<p>本质上是给方法传递一个数组实现</p>
+</blockquote>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>自己调用自己</p>
+<ul>
+<li>递归结构<ul>
+<li>递归头：即递归终点的到达条件</li>
+<li>递归体：调用自身的语句</li>
+</ul>
+</li>
+</ul>
+<p><strong>没有递归头将会导致递归工作栈溢出</strong></p>
+<p>例如递归实现阶乘</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">fact</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token function">fact</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 ]]></content>
       <categories>
@@ -215,6 +250,60 @@ java HelloWorld
       </tags>
   </entry>
   <entry>
+    <title>Java学习笔记-初识Java</title>
+    <url>/2021/08/24/Java-note-1/</url>
+    <content><![CDATA[<h2 id="Java-特性与优势"><a href="#Java-特性与优势" class="headerlink" title="Java 特性与优势"></a>Java 特性与优势</h2><ul>
+<li>简单性</li>
+<li>面向对象</li>
+<li>可移植性（<strong>跨平台</strong>）：Write once, run anywhere.</li>
+<li>高性能</li>
+<li>分布式</li>
+<li>动态性：反射机制</li>
+<li>多线程</li>
+<li>安全性</li>
+<li>健壮性</li>
+</ul>
+<h2 id="Java-三大版本"><a href="#Java-三大版本" class="headerlink" title="Java 三大版本"></a>Java 三大版本</h2><ul>
+<li><code>JavaSE</code>：标准版（桌面程序，控制台开发……）</li>
+<li><code>JavaME</code>：嵌入式开发（手机，小家电……）</li>
+<li><code>JavaEE</code>：企业级开发（web端，服务器开发……）</li>
+</ul>
+<h2 id="JDK、JRE、JVM-初识"><a href="#JDK、JRE、JVM-初识" class="headerlink" title="JDK、JRE、JVM 初识"></a>JDK、JRE、JVM 初识</h2><ul>
+<li><code>JDK</code>：Java Development Kit</li>
+<li><code>JRE</code>：Java Runtime Environment</li>
+<li><code>JVM</code>：Java Virtual Machine</li>
+</ul>
+<blockquote>
+<p><code>JRE</code> 扩充了一些开发工具后成为<code> JDK</code></p>
+<p><strong>JVM</strong> 是 Java 跨平台的核心</p>
+</blockquote>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p><code>HelloWord</code> 的 <code>Java</code>实现</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>在命令行窗口中运行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">javac HelloWorld.java
+# 在对应目录下运行cmd，将会生成一个.class文件
+java HelloWorld
+# 这里不用加后缀</code></pre>
+
+<p>运行成功后将打印</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">Hello, World!</code></pre>
+
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Java笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java学习笔记-Java流程控制</title>
     <url>/2021/08/24/Java-note-3/</url>
     <content><![CDATA[<h2 id="Scanner-对象"><a href="#Scanner-对象" class="headerlink" title="Scanner 对象"></a>Scanner 对象</h2><p>Java5 在 <code>java.util.Scanner</code> 中提供了 <code>Scanner</code> 类，可以获取用户输入，使用之前要导入这个包</p>
@@ -325,95 +414,6 @@ java HelloWorld
 <blockquote>
 <p>Java 没有<code>goto</code>，但可以通过<code>label</code>标签和<code>continue</code>&amp;<code>break</code>实现</p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>Java笔记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java学习笔记-Java方法</title>
-    <url>/2021/08/24/Java-note-4/</url>
-    <content><![CDATA[<h2 id="什么是方法"><a href="#什么是方法" class="headerlink" title="什么是方法"></a>什么是方法</h2><p>Java 方法是语句集合，它们在一起执行一个功能</p>
-<ul>
-<li>方法是解决一类问题的步骤的有序组合</li>
-<li>方法包含于类或对象中</li>
-<li>方法在程序中被创建，在其他地方被引用</li>
-</ul>
-<blockquote>
-<p>设计方法的原则：最好保持方法的原子性，即<strong>一个方法只完成一个功能</strong></p>
-</blockquote>
-<h2 id="方法的定义与调用"><a href="#方法的定义与调用" class="headerlink" title="方法的定义与调用"></a>方法的定义与调用</h2><h3 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h3><p>类似于C语言中的函数</p>
-<p><strong>方法包括一个方法头与一个方法体：</strong></p>
-<ul>
-<li><p>方法头：</p>
-<ul>
-<li>修饰符：可选，告诉编译器如何调用该方法，定义了该方法的访问类型</li>
-<li>返回值类型：方法可能会返回值。返回值类型是方法返回值的数据类型，若方法没有返回值，则返回值类型为<code>void</code></li>
-<li>方法名：是方法的实际名称，与参数表共同构成方法签名</li>
-<li>参数表：方法被调用时，将值传递给参数，这个值被称为实际参数或变量（实参），而用于接收外界输入的数据被称为形式参数（形参）；参数表指方法的参数类型、顺序和参数个数。方法可以不含任何参数<ul>
-<li>形式参数：在方法被调用时用于接收外界输入的数据。</li>
-<li>实际参数：调用方法时实际传递给方法的数据</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>方法体：方法体包含具体的执行语句，定义该方法的功能</p>
-</li>
-</ul>
-<pre class="language-java" data-language="java"><code class="language-java">修饰符 返回值类型 方法名<span class="token punctuation">(</span>参数类型 参数名<span class="token punctuation">)</span><span class="token punctuation">&#123;</span> <span class="token comment">//方法头</span>
-    <span class="token comment">/*
-      方法体
-    */</span>
-    <span class="token keyword">return</span> 返回值<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<h3 id="方法调用"><a href="#方法调用" class="headerlink" title="方法调用"></a>方法调用</h3><p>格式：<code>对象名.方法名(实参表)</code></p>
-<blockquote>
-<p>值传递与引用传递：</p>
-<p>Java是值传递的，即调用方法时，将实参的值拷贝给形参，对形参的值进行更改时，实参的值不会发生改变，<strong>注意：这里的“值”是指这个参数的值，它可以是数值，也可以是地址</strong>，因此在考虑调用方法后的值变化问题需要具体分析，可以指针和内存管理角度去理解（C语言还是有用）</p>
-</blockquote>
-<h2 id="方法的重载"><a href="#方法的重载" class="headerlink" title="方法的重载"></a>方法的重载</h2><p>重载就是一个类中，有相同的方法名称，但形参不同的方法</p>
-<p>规则：</p>
-<ul>
-<li>方法名称相同</li>
-<li>参数表必须不同（个数不同、或类型不同、或参数排列顺序不同等）</li>
-<li>方法的返回类型可以相同也可以不同</li>
-<li>仅仅返回类型不同不足以成为方法的重载</li>
-</ul>
-<h2 id="命令行传参"><a href="#命令行传参" class="headerlink" title="命令行传参"></a>命令行传参</h2><p>与C语言类似，在运行时通过给<code>main</code>方法传递参数来实现相应的功能</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">javac 文件名.java
-java 包名.类名 参数
-# 注意：运行时一定要回退至根目录下通过包名来找到类</code></pre>
-
-<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><p>JDK 1.5 开始支持传递同类型可变参数给一个方法</p>
-<p>在方法的声明中。在指定参数类型后加上一个省略号（…）</p>
-<p>一个方法中只能指定一个可变参数，且必须时方法的最后一个参数</p>
-<blockquote>
-<p>本质上是给方法传递一个数组实现</p>
-</blockquote>
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>自己调用自己</p>
-<ul>
-<li>递归结构<ul>
-<li>递归头：即递归终点的到达条件</li>
-<li>递归体：调用自身的语句</li>
-</ul>
-</li>
-</ul>
-<p><strong>没有递归头将会导致递归工作栈溢出</strong></p>
-<p>例如递归实现阶乘</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">fact</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span><span class="token keyword">else</span><span class="token punctuation">&#123;</span>
-        <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token function">fact</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
 ]]></content>
       <categories>
         <category>学习笔记</category>

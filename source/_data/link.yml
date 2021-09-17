@@ -1,0 +1,7 @@
+- class_name: 友链
+  class_desc: 
+  link_list:
+    - name: LRY's Blog
+      link: https://lry89757.github.io/
+      avatar: https://lry89757.github.io/medias/favicon.png
+      descr: 是个大佬
