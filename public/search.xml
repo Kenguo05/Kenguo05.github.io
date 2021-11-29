@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java学习笔记-初识Java</title>
+    <url>/2021/08/24/Java-note-1/</url>
+    <content><![CDATA[<h2 id="Java-特性与优势"><a href="#Java-特性与优势" class="headerlink" title="Java 特性与优势"></a>Java 特性与优势</h2><ul>
+<li>简单性</li>
+<li>面向对象</li>
+<li>可移植性（<strong>跨平台</strong>）：Write once, run anywhere.</li>
+<li>高性能</li>
+<li>分布式</li>
+<li>动态性：反射机制</li>
+<li>多线程</li>
+<li>安全性</li>
+<li>健壮性</li>
+</ul>
+<h2 id="Java-三大版本"><a href="#Java-三大版本" class="headerlink" title="Java 三大版本"></a>Java 三大版本</h2><ul>
+<li><code>JavaSE</code>：标准版（桌面程序，控制台开发……）</li>
+<li><code>JavaME</code>：嵌入式开发（手机，小家电……）</li>
+<li><code>JavaEE</code>：企业级开发（web端，服务器开发……）</li>
+</ul>
+<h2 id="JDK、JRE、JVM-初识"><a href="#JDK、JRE、JVM-初识" class="headerlink" title="JDK、JRE、JVM 初识"></a>JDK、JRE、JVM 初识</h2><ul>
+<li><code>JDK</code>：Java Development Kit</li>
+<li><code>JRE</code>：Java Runtime Environment</li>
+<li><code>JVM</code>：Java Virtual Machine</li>
+</ul>
+<blockquote>
+<p><code>JRE</code> 扩充了一些开发工具后成为<code> JDK</code></p>
+<p><strong>JVM</strong> 是 Java 跨平台的核心</p>
+</blockquote>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p><code>HelloWord</code> 的 <code>Java</code>实现</p>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">&#123;</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
+
+<p>在命令行窗口中运行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">javac HelloWorld.java
+# 在对应目录下运行cmd，将会生成一个.class文件
+java HelloWorld
+# 这里不用加后缀</code></pre>
+
+<p>运行成功后将打印</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">Hello, World!</code></pre>
+
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Java笔记</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java学习笔记-Java方法</title>
     <url>/2021/08/24/Java-note-4/</url>
     <content><![CDATA[<h2 id="什么是方法"><a href="#什么是方法" class="headerlink" title="什么是方法"></a>什么是方法</h2><p>Java 方法是语句集合，它们在一起执行一个功能</p>
@@ -250,60 +304,6 @@ java 包名.类名 参数
       </tags>
   </entry>
   <entry>
-    <title>Java学习笔记-初识Java</title>
-    <url>/2021/08/24/Java-note-1/</url>
-    <content><![CDATA[<h2 id="Java-特性与优势"><a href="#Java-特性与优势" class="headerlink" title="Java 特性与优势"></a>Java 特性与优势</h2><ul>
-<li>简单性</li>
-<li>面向对象</li>
-<li>可移植性（<strong>跨平台</strong>）：Write once, run anywhere.</li>
-<li>高性能</li>
-<li>分布式</li>
-<li>动态性：反射机制</li>
-<li>多线程</li>
-<li>安全性</li>
-<li>健壮性</li>
-</ul>
-<h2 id="Java-三大版本"><a href="#Java-三大版本" class="headerlink" title="Java 三大版本"></a>Java 三大版本</h2><ul>
-<li><code>JavaSE</code>：标准版（桌面程序，控制台开发……）</li>
-<li><code>JavaME</code>：嵌入式开发（手机，小家电……）</li>
-<li><code>JavaEE</code>：企业级开发（web端，服务器开发……）</li>
-</ul>
-<h2 id="JDK、JRE、JVM-初识"><a href="#JDK、JRE、JVM-初识" class="headerlink" title="JDK、JRE、JVM 初识"></a>JDK、JRE、JVM 初识</h2><ul>
-<li><code>JDK</code>：Java Development Kit</li>
-<li><code>JRE</code>：Java Runtime Environment</li>
-<li><code>JVM</code>：Java Virtual Machine</li>
-</ul>
-<blockquote>
-<p><code>JRE</code> 扩充了一些开发工具后成为<code> JDK</code></p>
-<p><strong>JVM</strong> 是 Java 跨平台的核心</p>
-</blockquote>
-<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p><code>HelloWord</code> 的 <code>Java</code>实现</p>
-<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloWorld</span><span class="token punctuation">&#123;</span>
-	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, World!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span></code></pre>
-
-<p>在命令行窗口中运行命令</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">javac HelloWorld.java
-# 在对应目录下运行cmd，将会生成一个.class文件
-java HelloWorld
-# 这里不用加后缀</code></pre>
-
-<p>运行成功后将打印</p>
-<pre class="language-sh" data-language="sh"><code class="language-sh">Hello, World!</code></pre>
-
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>Java笔记</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java学习笔记-Java流程控制</title>
     <url>/2021/08/24/Java-note-3/</url>
     <content><![CDATA[<h2 id="Scanner-对象"><a href="#Scanner-对象" class="headerlink" title="Scanner 对象"></a>Scanner 对象</h2><p>Java5 在 <code>java.util.Scanner</code> 中提供了 <code>Scanner</code> 类，可以获取用户输入，使用之前要导入这个包</p>
@@ -502,28 +502,6 @@ arrayRefVar<span class="token punctuation">[</span><span class="token number">1<
       </tags>
   </entry>
   <entry>
-    <title>被SSL搞疯了</title>
-    <url>/2021/08/18/SSL-makes-me-crazy-md/</url>
-    <content><![CDATA[<p>折腾云服务器真的要把我搞疯了QAQ！！！</p>
-<span id="more"></span>
-
-<h2 id="SOS要死了要死了！！"><a href="#SOS要死了要死了！！" class="headerlink" title="SOS要死了要死了！！"></a>SOS要死了要死了！！</h2><p>之前花了大力气搞了个云服务器，把部署环境都装好了，也部署成功了，然后想着给网站整个SSL，结果没整明白，一通瞎搞最后终于在网址栏上看见了那个熟悉的小锁，然后以为这就结束了，结果跑到又拍云整个CDN回来又发现网站无法访问了，不知道发生了什么，有无懂行的帮一下啊QAQ！！</p>
-<hr>
-<p>自己折腾了半天发现果然还是托管到GitHub上香，直接进行一个摆烂。</p>
-<p>还有就是现在我在腾讯云上也注册了一个账号，到时候也玩玩这边的服务器，看看跟阿里那边有啥不同的体验，网站果然还是挂在GitHub上好，访问速度什么的，<del>建议科学上网</del>，心诚则灵（bushi）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-emoji/1629272544-13552.jpg" alt="1629272544-13552"></p>
-<hr>
-<h4 id="不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！"><a href="#不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！" class="headerlink" title="不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！"></a>不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！</h4><p>run了run了。</p>
-]]></content>
-      <categories>
-        <category>牢骚向</category>
-      </categories>
-      <tags>
-        <tag>博客搭建</tag>
-        <tag>SSL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java学习笔记-异常</title>
     <url>/2021/08/25/Java-note-7/</url>
     <content><![CDATA[<h2 id="Exception-和-Error"><a href="#Exception-和-Error" class="headerlink" title="Exception 和 Error"></a>Exception 和 Error</h2><ul>
@@ -646,6 +624,28 @@ arrayRefVar<span class="token punctuation">[</span><span class="token number">1<
       </tags>
   </entry>
   <entry>
+    <title>被SSL搞疯了</title>
+    <url>/2021/08/18/SSL-makes-me-crazy-md/</url>
+    <content><![CDATA[<p>折腾云服务器真的要把我搞疯了QAQ！！！</p>
+<span id="more"></span>
+
+<h2 id="SOS要死了要死了！！"><a href="#SOS要死了要死了！！" class="headerlink" title="SOS要死了要死了！！"></a>SOS要死了要死了！！</h2><p>之前花了大力气搞了个云服务器，把部署环境都装好了，也部署成功了，然后想着给网站整个SSL，结果没整明白，一通瞎搞最后终于在网址栏上看见了那个熟悉的小锁，然后以为这就结束了，结果跑到又拍云整个CDN回来又发现网站无法访问了，不知道发生了什么，有无懂行的帮一下啊QAQ！！</p>
+<hr>
+<p>自己折腾了半天发现果然还是托管到GitHub上香，直接进行一个摆烂。</p>
+<p>还有就是现在我在腾讯云上也注册了一个账号，到时候也玩玩这边的服务器，看看跟阿里那边有啥不同的体验，网站果然还是挂在GitHub上好，访问速度什么的，<del>建议科学上网</del>，心诚则灵（bushi）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-emoji/1629272544-13552.jpg" alt="1629272544-13552"></p>
+<hr>
+<h4 id="不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！"><a href="#不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！" class="headerlink" title="不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！"></a>不管了，还有一大堆破事没整完，各种报告和课题要写，懒得管这服务器了，寄！</h4><p>run了run了。</p>
+]]></content>
+      <categories>
+        <category>牢骚向</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+        <tag>SSL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客搭建过程与心得</title>
     <url>/2021/08/05/blog-generating-sharing/</url>
     <content><![CDATA[<p>记录自己第一次博客搭建~~</p>
@@ -746,6 +746,255 @@ git push # 第一次推送记得指定默认分支
         <tag>博客搭建</tag>
         <tag>Hexo</tag>
         <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>虚拟环境下Hadoop集群测试运行WordCount</title>
+    <url>/2021/11/20/learing_hadoop/</url>
+    <content><![CDATA[<h2 id="大数据课设天降"><a href="#大数据课设天降" class="headerlink" title="大数据课设天降"></a>大数据课设天降</h2><p>离大谱了属于是，什么牛马大数据突然整个课程设计，明明上课的时候老师比学生还摆，要不是为了学分爷才不做。。。</p>
+<p>课设内容是选择一个大数据系统，在虚拟化环境中搭建两个节点以上的集群部署系统并挑选一个应用进行测试。</p>
+<p>于是俺就搭了个三节点集群，节点上运行 <a href="https://www.centos.org/">CentOS 7</a>，部署 <a href="http://hadoop.apache.org/">Hadoop</a>，随便跑了个WordCount应付了一下，这里做个简单复盘</p>
+<p><strong>PS：由于以前也没接触过这种东西，基本上都是一边学一边查一边做的，就。。可能有很多沙雕问题，果咩</strong></p>
+<h2 id="虚拟化环境的搭建"><a href="#虚拟化环境的搭建" class="headerlink" title="虚拟化环境的搭建"></a>虚拟化环境的搭建</h2><p>虚拟机的话，选择了 <a href="https://www.vmware.com/">VMware</a>，这个应该是挺多人都在使用的虚拟机软件了，使用起来也挺简单的。对于这种需要搭建多节点集群的课题，选择 VMware 家的软件记得要选那个 <a href="https://www.vmware.com/products/workstation-pro.html">Workstation Pro</a>，还有一个叫 Workstation Player 的功能比较少，好像不支持多节点集群。</p>
+<p>软件下好之后要准备操作系统，这里选择了 CentOS 7，这个应该用的人也挺多的，Ubuntu 也不错，不过我没用过，好像一些命令有区别，不过应该差不多，下载的话下载那个 x86_64 的 iso 文件，回头建立虚拟机的时候把映像文件路径指向这个文件就好了。</p>
+<p>虚拟机的搭建挺简单的，网上教程很多，我不赘述了（就是懒，开摆！</p>
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><p>由于要让节点之间能够通讯，这里需要配置 Linux 的网卡文件，登录 root 用户，输入命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts</code></pre>
+
+<p>进入该目录，输入 <code>ls</code> 查看目录文件，应该可以看到一个文件名为<code>ifcfg-ens32</code> 的文件，使用 <code>vim</code> 编辑它（<strong>注意：这个文件名中的数字不同机器可能不同，我这里是32，也有可能是33或者34啥的，反正就编辑这个 <code>ifcfg-ens数字</code> 的文件就好</strong></p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">vi ifcfg-ens32</code></pre>
+
+<p>修改几个条目</p>
+<pre class="language-none"><code class="language-none">BOOTPROTO&#x3D;static # 这个默认值应该是dhcp
+ONBOOT&#x3D;yes # 这个默认值应该是no</code></pre>
+
+<p>再加几个条目</p>
+<pre class="language-none"><code class="language-none">IPADDR&#x3D;192.168.137.101 
+# 这里的ip要根据自己的情况配置，前三个数字可以在VMware的虚拟网络编辑器中查看，注意是NAT项中对应的网段，最后一个数字可以随便填，注意不同节点应该不同
+GATEWAY&#x3D;192.168.137.2
+# 这个看虚拟网络编辑器的NAT的相关设置中查看网关，要和那里面的数字一样
+DNS1&#x3D;192.168.137.2
+# 这个和上面一条一样</code></pre>
+
+<p>修改完后，重启网络服务让其生效</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">service network restart</code></pre>
+
+<p>可以通过 <code>ipaddr</code> 或者 <code>ifconfig</code> 命令查看 ip 是否配置成功，其中有时 <code>ifconfig</code> 需要安装网络工具后才能使用，可以用 <code>yum</code> 安装</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">yum install net-tools</code></pre>
+
+<p>就可以使用了。</p>
+<p>下一步修改主机名，方便集群搭建后区分各个主机，进入目录 <code>/etc</code>下，修改 <code>hostname</code> 文件</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">cd &#x2F;etc
+vi hostname</code></pre>
+
+<p>将内容修改成</p>
+<pre class="language-none"><code class="language-none">hadoopmaster</code></pre>
+
+<p>当然可以随意起名字，只要自己确认节点之间的关系就好了，如果是从节点，可以修改为 <code>hadoopslave</code> ，怎么方便怎么来。</p>
+<p>修改 <code>hosts</code> 文件，增加条目</p>
+<pre class="language-none"><code class="language-none">192.168.137.101 hadoopmaster
+192.168.137.102 hadoopslave1
+192.168.137.103 hadoopslave2</code></pre>
+
+<p>三节点都这么配置，这样节点之间相互通讯的时候就不用 ip 了，用主机名更容易让人理解。</p>
+<p>还需要关闭防火墙</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">systemctl stop firewalld
+systemctl disable firewalld</code></pre>
+
+<p>为了方便之后的操作，可以新建一个 <code>hadoop</code> 用户</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">useradd -d &#x2F;home&#x2F;hadoop hadoop
+# 新建用户
+passwd hadoop
+# 修改密码</code></pre>
+
+<p>然后赋予该用户 <code>root</code> 权限，到时候 Hadoop 系统的运行都将在这个用户下完成</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">vi &#x2F;etc&#x2F;sudoers</code></pre>
+
+<p>在文件后追加以下内容</p>
+<pre class="language-none"><code class="language-none">hadoop    ALL&#x3D;(ALL)    ALL</code></pre>
+
+<p>完成。</p>
+<h2 id="安装-JDK"><a href="#安装-JDK" class="headerlink" title="安装 JDK"></a>安装 JDK</h2><p>Hadoop 是基于 Java 的大数据系统，所以需要配置 Java 环境，这里选择使用 <a href="https://www.netsarang.com/zh/xftp/">Xftp</a> 直接上传 Java 安装包到虚拟机，这个公司做了不少远程开发用的软件，我平时用的比如命令行工具 Xshell，文件传输工具 Xftp，这些软件个人使用是完全免费的，非常良心，可以去人家 <a href="https://www.netsarang.com/zh/">NetSarang 官网</a>看看。先去 <a href="https://www.oracle.com/java/technologies/downloads/#java8">Java 官网</a>准备好 Java 的 Linux 安装包，这里选择使用经典的 Java 8，在 Xftp 中通过之前配置的 ip 地址远程连接到虚拟机，用 root 用户登录，选择一个合适的目录，我选择了 <code>/root/apps</code>，将安装包直接从本地拖到目录下，然后再虚拟机中进入相应目录，可以查看到该安装包，解压它</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">tar -zxvf jdk-8u311-linux-x64.tar.gz -C &#x2F;root&#x2F;apps
+# 第三个字符串是自己下的安装包的名字，最后一个是解压到的目录</code></pre>
+
+<p>和 Windows 系统中一样，需要配置 Java 环境变量，输入命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">vi &#x2F;etc&#x2F;profile</code></pre>
+
+<p>在文件最后加入</p>
+<pre class="language-none"><code class="language-none">export JAVA_HOME&#x3D;&#x2F;root&#x2F;apps&#x2F;jdk1.8.0_311
+export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin</code></pre>
+
+<p>重新加载环境变量</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">source &#x2F;etc&#x2F;profile</code></pre>
+
+<p>检测是否配置成功，输入</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">java -version</code></pre>
+
+<p>若打印 Java 版本号，则说明配置成功。</p>
+<h2 id="配置免密登录"><a href="#配置免密登录" class="headerlink" title="配置免密登录"></a>配置免密登录</h2><p>由于 Hadoop 需要将任务发布到各个节点，有必要配置 ssh 免密登录，保证相互之间能够方便的登录，在三台机器上分别输入</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">su hadoop 
+# 切换到hadoop用户
+cd ~
+# 进入用户目录
+ssh-keygen
+# 生成密钥</code></pre>
+
+<p>然后不管输出什么，一路回车，直到生成完成。生成完成后，在 <code>hadoop</code> 用户目录下将生成一个 <code>.ssh</code> 文件夹，文件夹中存放了密钥与公钥，现在需要建立主机之间的信任关系实现免密登录，输入命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">ssh-copy-id hadoopslave1
+ssh-copy-id hadoopslave2
+# 这里根据自己的主机名修改</code></pre>
+
+<p><strong>最后还需要建立自己对自己的免密登录，命令同理</strong></p>
+<p>保证三台主机能够相互免密登录即可，可以这样验证</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">ssh hadoopslave1</code></pre>
+
+<p>若成功免密登录，则配置成功。</p>
+<h2 id="安装部署-Hadoop"><a href="#安装部署-Hadoop" class="headerlink" title="安装部署 Hadoop"></a>安装部署 Hadoop</h2><p>去 <a href="https://hadoop.apache.org/releases.html">Apache Hadoop 官网</a>下载安装包，这里可以选择 <code>binary</code> 版本。<del>当然如果是硬核大佬可以下载 <code>source</code> 版的自行编译（逃</del></p>
+<h3 id="安装-Hadoop"><a href="#安装-Hadoop" class="headerlink" title="安装 Hadoop"></a>安装 Hadoop</h3><p>连接其中一个主机，通过 Xftp 将 Hadoop 上传到特定目录下，比如我上传到了 <code>/usr/scr</code> 下，然后执行以下命令解压至特定目录下</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">tar -zxvf hadoop-3.3.1.tar.gz -C &#x2F;home&#x2F;hadoop&#x2F;apps
+# 这里表示将安装包解压至&#x2F;home&#x2F;hadoop&#x2F;apps目录下</code></pre>
+
+<p>解压后在 <code>/home/hadoop/apps</code> 目录下可以看到 Hadoop 的文件夹。</p>
+<h3 id="修改-Hadoop-配置文件"><a href="#修改-Hadoop-配置文件" class="headerlink" title="修改 Hadoop 配置文件"></a>修改 Hadoop 配置文件</h3><p>Hadoop 的配置文件存放在 <code>hadoop-3.3.1/etc/hadoop</code> 目录下</p>
+<h4 id="修改-hadoop-env-sh"><a href="#修改-hadoop-env-sh" class="headerlink" title="修改 hadoop-env.sh"></a>修改 hadoop-env.sh</h4><p>在文件中加入以下内容</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">export JAVA_HOME&#x3D;&#x2F;root&#x2F;apps&#x2F;jdk1.8.0_311
+# 这里写自己JAVA_HOME的路径</code></pre>
+
+<h4 id="修改-core-site-xml"><a href="#修改-core-site-xml" class="headerlink" title="修改 core-site.xml"></a>修改 core-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>fs.defaultFS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hdfs://hadoopmaster:9000<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定namenode<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>hadoop.tmp.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop/hadoopdata<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定Hadoop运行产生的数据存放的目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改-hdfs-site-xml"><a href="#修改-hdfs-site-xml" class="headerlink" title="修改 hdfs-site.xml"></a>修改 hdfs-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.namenode.name.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop/hadoopdata/name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定namenode的数据存储目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.datanode.data.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop/hadoopdata/data<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定datanode的数据存储目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.replication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定HDFS数据副本存储数<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.secondary.http.address<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hadoopslave1:50090<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定secondarynamenode及其访问端口，是与namenode不同的节点<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改mapred-site-xml"><a href="#修改mapred-site-xml" class="headerlink" title="修改mapred-site.xml"></a>修改mapred-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.framwork.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>yarn<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定yarn为资源调度框架<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<p><strong>这里其实还有一段要写，我刚开始运行的时候，提示报错，无法加载 classpath ，解决方法如下</strong></p>
+<p>通过命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop classpath</code></pre>
+
+<p>显示完整的 classpath ，这里将打印一大串路径，将其复制下来，回到 <code>mapred-site.xml</code> 文件，在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>yarn.app.mapreduce.am.env<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>刚刚复制的路径<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.map.env<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>刚刚复制的路径<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.reduce.env<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>刚刚复制的路径<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改-yarn-site-xml"><a href="#修改-yarn-site-xml" class="headerlink" title="修改 yarn-site.xml"></a>修改 yarn-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>yarn.resourcemanager.hostname<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hadoopmaster<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定resourcemanager，与namenode不同或相同好像都行<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>yarn.nodemanager.aux-services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>mapreduce_shuffle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定yarn集群为mapreduce程序提供的shuffle服务<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改-workers-文件"><a href="#修改-workers-文件" class="headerlink" title="修改 workers 文件"></a>修改 workers 文件</h4><p>在文件中加入以下内容，指定从节点</p>
+<pre class="language-none"><code class="language-none">hadoopmaster
+hadoopslave1
+hadoopslave2</code></pre>
+
+<p><strong>注意：老版本的 Hadoop 中可能没有 workers 文件，但是有一个 slaves 文件，这两个文件有哪个就在那个文件章加入上面的内容</strong></p>
+<h3 id="部署-Hadoop-至集群"><a href="#部署-Hadoop-至集群" class="headerlink" title="部署 Hadoop 至集群"></a>部署 Hadoop 至集群</h3><p>输入以下命令将 Hadoop 安装目录同步至另外两个节点</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">scp -r hadoop-3.3.1&#x2F; hadoop@hadoopslave1:&#x2F;home&#x2F;hadoop&#x2F;apps
+scp -r hadoop-3.3.1&#x2F; hadoop@hadoopslave2:&#x2F;home&#x2F;hadoop&#x2F;apps</code></pre>
+
+<p>修改各个节点的环境变量， 在 <code>/etc/profile</code> 添加</p>
+<pre class="language-none"><code class="language-none">export HADOOP_HOME&#x3D;&#x2F;home&#x2F;hadoop&#x2F;apps&#x2F;hadoop-3.3.1
+export PATH&#x3D;$PATH:$HADOOP_HOME&#x2F;bin:$HADOOP_HOME&#x2F;sbin</code></pre>
+
+<p>重新加载环境变量</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">source &#x2F;etc&#x2F;profile</code></pre>
+
+<p>通过 <code>hadoop --help</code> 测试配置是否成功</p>
+<h3 id="初始化-namenode"><a href="#初始化-namenode" class="headerlink" title="初始化 namenode"></a>初始化 namenode</h3><p>在先前配置的 namenode 上执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop namenode -format</code></pre>
+
+<p>若输出信息打印 <code>successfully formatted</code> ，即说明初始化成功，检查 <code>hadoop</code> 目录下应多出一个 <code>hadoopdata</code> 目录</p>
+<h2 id="启动-Hadoop集群"><a href="#启动-Hadoop集群" class="headerlink" title="启动 Hadoop集群"></a>启动 Hadoop集群</h2><p>顺利到达这一步，胜利近在眼前，好耶！<del>其实后面又出了一堆bug调试了大半天</del></p>
+<h3 id="启动-HDFS"><a href="#启动-HDFS" class="headerlink" title="启动 HDFS"></a>启动 HDFS</h3><p>在任意节点上执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">start-dfs.sh</code></pre>
+
+<p>启动完成后，在各个节点上通过 <code>jps</code> 命令检查进程，根据以上的配置，查询到的进程应为</p>
+<ul>
+<li><p>hadoopmaster 上</p>
+<p>存在 namenode 、datanode、jps 三类进程</p>
+</li>
+<li><p>hadoopslave1 上</p>
+<p>存在 secondarynamenode 、datanode、jps 三类进程</p>
+</li>
+<li><p>hadoopslave2 上</p>
+<p>存在 datanode、jps 两类进程</p>
+</li>
+</ul>
+<h3 id="启动-yarn"><a href="#启动-yarn" class="headerlink" title="启动 yarn"></a>启动 yarn</h3><p>在 resourcemanager 节点上执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">start-yarn.sh</code></pre>
+
+<p>启动完成后，在该节点上可以查询到 resourcemanager 进程</p>
+<h2 id="尝试运行-WordCount"><a href="#尝试运行-WordCount" class="headerlink" title="尝试运行 WordCount"></a>尝试运行 WordCount</h2><p>准备一份文本文件，上传至任意节点，通过命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop fs -put test.txt &#x2F;input</code></pre>
+
+<p>把节点上的 <code>test.txt</code> 文件上传到 hdfs 系统的 <code>/input</code> 目录下</p>
+<p>执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop jar &#x2F;home&#x2F;hadoop&#x2F;apps&#x2F;hadoop-3.3.1&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-3.3.1.jar wordcount &#x2F;input &#x2F;output</code></pre>
+
+<p>表示对 <code>/input</code> 目录下的文件执行 WordCount 应用，将结果输出到 <code>/output</code> 目录下</p>
+<p>执行成功后，通过浏览器访问名节点的 9870 端口，可以进入文件系统，在 <code>/output</code> 目录下可以看到一个 <code>part-r-00000</code> 文件，这就是结果文件。</p>
+<p>至此，整个节点的搭建与部署完成，之后就只要找点测试文件测一测，<del>摆大烂了</del>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>写这么篇博客也就是复盘一下课设整个过程，虽然大数据课老师基本啥也没讲，布置这么一个作业实在是很啥比，但 Hadoop 还是很有用的，记录一下万一以后用到了呢。</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>大数据笔记</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+        <tag>虚拟机</tag>
+        <tag>大数据</tag>
+        <tag>Hadoop</tag>
       </tags>
   </entry>
   <entry>

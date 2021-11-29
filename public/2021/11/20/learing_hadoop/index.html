@@ -1,0 +1,445 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>虚拟环境下Hadoop集群测试运行WordCount | Kkenの牢骚小站</title><meta name="keywords" content="学习,虚拟机,大数据,Hadoop"><meta name="author" content="Kken"><meta name="copyright" content="Kken"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="卑微上学人应付大数据课程设计搭建了一个虚拟的Hadoop集群跑了一下WordCount">
+<meta property="og:type" content="article">
+<meta property="og:title" content="虚拟环境下Hadoop集群测试运行WordCount">
+<meta property="og:url" content="https://www.blogkken.cc/2021/11/20/learing_hadoop/index.html">
+<meta property="og:site_name" content="Kkenの牢骚小站">
+<meta property="og:description" content="卑微上学人应付大数据课程设计搭建了一个虚拟的Hadoop集群跑了一下WordCount">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-img/Hadoop.jpg">
+<meta property="article:published_time" content="2021-11-20T10:48:34.000Z">
+<meta property="article:modified_time" content="2021-11-29T09:56:38.711Z">
+<meta property="article:author" content="Kken">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="虚拟机">
+<meta property="article:tag" content="大数据">
+<meta property="article:tag" content="Hadoop">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-img/Hadoop.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://www.blogkken.cc/2021/11/20/learing_hadoop/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '虚拟环境下Hadoop集群测试运行WordCount',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-11-29 17:56:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Kkenの牢骚小站" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/avatar90730715_p0.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-img/Hadoop.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Kkenの牢骚小站</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">虚拟环境下Hadoop集群测试运行WordCount</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-20T10:48:34.000Z" title="发表于 2021-11-20 18:48:34">2021-11-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-29T09:56:38.711Z" title="更新于 2021-11-29 17:56:38">2021-11-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%AC%94%E8%AE%B0/">大数据笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="虚拟环境下Hadoop集群测试运行WordCount"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="大数据课设天降"><a href="#大数据课设天降" class="headerlink" title="大数据课设天降"></a>大数据课设天降</h2><p>离大谱了属于是，什么牛马大数据突然整个课程设计，明明上课的时候老师比学生还摆，要不是为了学分爷才不做。。。</p>
+<p>课设内容是选择一个大数据系统，在虚拟化环境中搭建两个节点以上的集群部署系统并挑选一个应用进行测试。</p>
+<p>于是俺就搭了个三节点集群，节点上运行 <a target="_blank" rel="noopener" href="https://www.centos.org/">CentOS 7</a>，部署 <a target="_blank" rel="noopener" href="http://hadoop.apache.org/">Hadoop</a>，随便跑了个WordCount应付了一下，这里做个简单复盘</p>
+<p><strong>PS：由于以前也没接触过这种东西，基本上都是一边学一边查一边做的，就。。可能有很多沙雕问题，果咩</strong></p>
+<h2 id="虚拟化环境的搭建"><a href="#虚拟化环境的搭建" class="headerlink" title="虚拟化环境的搭建"></a>虚拟化环境的搭建</h2><p>虚拟机的话，选择了 <a target="_blank" rel="noopener" href="https://www.vmware.com/">VMware</a>，这个应该是挺多人都在使用的虚拟机软件了，使用起来也挺简单的。对于这种需要搭建多节点集群的课题，选择 VMware 家的软件记得要选那个 <a target="_blank" rel="noopener" href="https://www.vmware.com/products/workstation-pro.html">Workstation Pro</a>，还有一个叫 Workstation Player 的功能比较少，好像不支持多节点集群。</p>
+<p>软件下好之后要准备操作系统，这里选择了 CentOS 7，这个应该用的人也挺多的，Ubuntu 也不错，不过我没用过，好像一些命令有区别，不过应该差不多，下载的话下载那个 x86_64 的 iso 文件，回头建立虚拟机的时候把映像文件路径指向这个文件就好了。</p>
+<p>虚拟机的搭建挺简单的，网上教程很多，我不赘述了（就是懒，开摆！</p>
+<h2 id="网络配置"><a href="#网络配置" class="headerlink" title="网络配置"></a>网络配置</h2><p>由于要让节点之间能够通讯，这里需要配置 Linux 的网卡文件，登录 root 用户，输入命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">cd &#x2F;etc&#x2F;sysconfig&#x2F;network-scripts</code></pre>
+
+<p>进入该目录，输入 <code>ls</code> 查看目录文件，应该可以看到一个文件名为<code>ifcfg-ens32</code> 的文件，使用 <code>vim</code> 编辑它（<strong>注意：这个文件名中的数字不同机器可能不同，我这里是32，也有可能是33或者34啥的，反正就编辑这个 <code>ifcfg-ens数字</code> 的文件就好</strong></p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">vi ifcfg-ens32</code></pre>
+
+<p>修改几个条目</p>
+<pre class="language-none"><code class="language-none">BOOTPROTO&#x3D;static # 这个默认值应该是dhcp
+ONBOOT&#x3D;yes # 这个默认值应该是no</code></pre>
+
+<p>再加几个条目</p>
+<pre class="language-none"><code class="language-none">IPADDR&#x3D;192.168.137.101 
+# 这里的ip要根据自己的情况配置，前三个数字可以在VMware的虚拟网络编辑器中查看，注意是NAT项中对应的网段，最后一个数字可以随便填，注意不同节点应该不同
+GATEWAY&#x3D;192.168.137.2
+# 这个看虚拟网络编辑器的NAT的相关设置中查看网关，要和那里面的数字一样
+DNS1&#x3D;192.168.137.2
+# 这个和上面一条一样</code></pre>
+
+<p>修改完后，重启网络服务让其生效</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">service network restart</code></pre>
+
+<p>可以通过 <code>ipaddr</code> 或者 <code>ifconfig</code> 命令查看 ip 是否配置成功，其中有时 <code>ifconfig</code> 需要安装网络工具后才能使用，可以用 <code>yum</code> 安装</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">yum install net-tools</code></pre>
+
+<p>就可以使用了。</p>
+<p>下一步修改主机名，方便集群搭建后区分各个主机，进入目录 <code>/etc</code>下，修改 <code>hostname</code> 文件</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">cd &#x2F;etc
+vi hostname</code></pre>
+
+<p>将内容修改成</p>
+<pre class="language-none"><code class="language-none">hadoopmaster</code></pre>
+
+<p>当然可以随意起名字，只要自己确认节点之间的关系就好了，如果是从节点，可以修改为 <code>hadoopslave</code> ，怎么方便怎么来。</p>
+<p>修改 <code>hosts</code> 文件，增加条目</p>
+<pre class="language-none"><code class="language-none">192.168.137.101 hadoopmaster
+192.168.137.102 hadoopslave1
+192.168.137.103 hadoopslave2</code></pre>
+
+<p>三节点都这么配置，这样节点之间相互通讯的时候就不用 ip 了，用主机名更容易让人理解。</p>
+<p>还需要关闭防火墙</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">systemctl stop firewalld
+systemctl disable firewalld</code></pre>
+
+<p>为了方便之后的操作，可以新建一个 <code>hadoop</code> 用户</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">useradd -d &#x2F;home&#x2F;hadoop hadoop
+# 新建用户
+passwd hadoop
+# 修改密码</code></pre>
+
+<p>然后赋予该用户 <code>root</code> 权限，到时候 Hadoop 系统的运行都将在这个用户下完成</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">vi &#x2F;etc&#x2F;sudoers</code></pre>
+
+<p>在文件后追加以下内容</p>
+<pre class="language-none"><code class="language-none">hadoop    ALL&#x3D;(ALL)    ALL</code></pre>
+
+<p>完成。</p>
+<h2 id="安装-JDK"><a href="#安装-JDK" class="headerlink" title="安装 JDK"></a>安装 JDK</h2><p>Hadoop 是基于 Java 的大数据系统，所以需要配置 Java 环境，这里选择使用 <a target="_blank" rel="noopener" href="https://www.netsarang.com/zh/xftp/">Xftp</a> 直接上传 Java 安装包到虚拟机，这个公司做了不少远程开发用的软件，我平时用的比如命令行工具 Xshell，文件传输工具 Xftp，这些软件个人使用是完全免费的，非常良心，可以去人家 <a target="_blank" rel="noopener" href="https://www.netsarang.com/zh/">NetSarang 官网</a>看看。先去 <a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/#java8">Java 官网</a>准备好 Java 的 Linux 安装包，这里选择使用经典的 Java 8，在 Xftp 中通过之前配置的 ip 地址远程连接到虚拟机，用 root 用户登录，选择一个合适的目录，我选择了 <code>/root/apps</code>，将安装包直接从本地拖到目录下，然后再虚拟机中进入相应目录，可以查看到该安装包，解压它</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">tar -zxvf jdk-8u311-linux-x64.tar.gz -C &#x2F;root&#x2F;apps
+# 第三个字符串是自己下的安装包的名字，最后一个是解压到的目录</code></pre>
+
+<p>和 Windows 系统中一样，需要配置 Java 环境变量，输入命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">vi &#x2F;etc&#x2F;profile</code></pre>
+
+<p>在文件最后加入</p>
+<pre class="language-none"><code class="language-none">export JAVA_HOME&#x3D;&#x2F;root&#x2F;apps&#x2F;jdk1.8.0_311
+export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin</code></pre>
+
+<p>重新加载环境变量</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">source &#x2F;etc&#x2F;profile</code></pre>
+
+<p>检测是否配置成功，输入</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">java -version</code></pre>
+
+<p>若打印 Java 版本号，则说明配置成功。</p>
+<h2 id="配置免密登录"><a href="#配置免密登录" class="headerlink" title="配置免密登录"></a>配置免密登录</h2><p>由于 Hadoop 需要将任务发布到各个节点，有必要配置 ssh 免密登录，保证相互之间能够方便的登录，在三台机器上分别输入</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">su hadoop 
+# 切换到hadoop用户
+cd ~
+# 进入用户目录
+ssh-keygen
+# 生成密钥</code></pre>
+
+<p>然后不管输出什么，一路回车，直到生成完成。生成完成后，在 <code>hadoop</code> 用户目录下将生成一个 <code>.ssh</code> 文件夹，文件夹中存放了密钥与公钥，现在需要建立主机之间的信任关系实现免密登录，输入命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">ssh-copy-id hadoopslave1
+ssh-copy-id hadoopslave2
+# 这里根据自己的主机名修改</code></pre>
+
+<p><strong>最后还需要建立自己对自己的免密登录，命令同理</strong></p>
+<p>保证三台主机能够相互免密登录即可，可以这样验证</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">ssh hadoopslave1</code></pre>
+
+<p>若成功免密登录，则配置成功。</p>
+<h2 id="安装部署-Hadoop"><a href="#安装部署-Hadoop" class="headerlink" title="安装部署 Hadoop"></a>安装部署 Hadoop</h2><p>去 <a target="_blank" rel="noopener" href="https://hadoop.apache.org/releases.html">Apache Hadoop 官网</a>下载安装包，这里可以选择 <code>binary</code> 版本。<del>当然如果是硬核大佬可以下载 <code>source</code> 版的自行编译（逃</del></p>
+<h3 id="安装-Hadoop"><a href="#安装-Hadoop" class="headerlink" title="安装 Hadoop"></a>安装 Hadoop</h3><p>连接其中一个主机，通过 Xftp 将 Hadoop 上传到特定目录下，比如我上传到了 <code>/usr/scr</code> 下，然后执行以下命令解压至特定目录下</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">tar -zxvf hadoop-3.3.1.tar.gz -C &#x2F;home&#x2F;hadoop&#x2F;apps
+# 这里表示将安装包解压至&#x2F;home&#x2F;hadoop&#x2F;apps目录下</code></pre>
+
+<p>解压后在 <code>/home/hadoop/apps</code> 目录下可以看到 Hadoop 的文件夹。</p>
+<h3 id="修改-Hadoop-配置文件"><a href="#修改-Hadoop-配置文件" class="headerlink" title="修改 Hadoop 配置文件"></a>修改 Hadoop 配置文件</h3><p>Hadoop 的配置文件存放在 <code>hadoop-3.3.1/etc/hadoop</code> 目录下</p>
+<h4 id="修改-hadoop-env-sh"><a href="#修改-hadoop-env-sh" class="headerlink" title="修改 hadoop-env.sh"></a>修改 hadoop-env.sh</h4><p>在文件中加入以下内容</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">export JAVA_HOME&#x3D;&#x2F;root&#x2F;apps&#x2F;jdk1.8.0_311
+# 这里写自己JAVA_HOME的路径</code></pre>
+
+<h4 id="修改-core-site-xml"><a href="#修改-core-site-xml" class="headerlink" title="修改 core-site.xml"></a>修改 core-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>fs.defaultFS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hdfs://hadoopmaster:9000<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定namenode<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>hadoop.tmp.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop/hadoopdata<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定Hadoop运行产生的数据存放的目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改-hdfs-site-xml"><a href="#修改-hdfs-site-xml" class="headerlink" title="修改 hdfs-site.xml"></a>修改 hdfs-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.namenode.name.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop/hadoopdata/name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定namenode的数据存储目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.datanode.data.dir<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>/home/hadoop/hadoopdata/data<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定datanode的数据存储目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.replication<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定HDFS数据副本存储数<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>dfs.secondary.http.address<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hadoopslave1:50090<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定secondarynamenode及其访问端口，是与namenode不同的节点<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改mapred-site-xml"><a href="#修改mapred-site-xml" class="headerlink" title="修改mapred-site.xml"></a>修改mapred-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.framwork.name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>yarn<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定yarn为资源调度框架<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<p><strong>这里其实还有一段要写，我刚开始运行的时候，提示报错，无法加载 classpath ，解决方法如下</strong></p>
+<p>通过命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop classpath</code></pre>
+
+<p>显示完整的 classpath ，这里将打印一大串路径，将其复制下来，回到 <code>mapred-site.xml</code> 文件，在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>yarn.app.mapreduce.am.env<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>刚刚复制的路径<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.map.env<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>刚刚复制的路径<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>mapreduce.reduce.env<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>刚刚复制的路径<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改-yarn-site-xml"><a href="#修改-yarn-site-xml" class="headerlink" title="修改 yarn-site.xml"></a>修改 yarn-site.xml</h4><p>在文件的 <code>&lt;configuration&gt;</code> 标签中加入</p>
+<pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>yarn.resourcemanager.hostname<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>hadoopmaster<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定resourcemanager，与namenode不同或相同好像都行<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>yarn.nodemanager.aux-services<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>value</span><span class="token punctuation">></span></span>mapreduce_shuffle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>value</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用于指定yarn集群为mapreduce程序提供的shuffle服务<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>description</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>property</span><span class="token punctuation">></span></span></code></pre>
+
+<h4 id="修改-workers-文件"><a href="#修改-workers-文件" class="headerlink" title="修改 workers 文件"></a>修改 workers 文件</h4><p>在文件中加入以下内容，指定从节点</p>
+<pre class="language-none"><code class="language-none">hadoopmaster
+hadoopslave1
+hadoopslave2</code></pre>
+
+<p><strong>注意：老版本的 Hadoop 中可能没有 workers 文件，但是有一个 slaves 文件，这两个文件有哪个就在那个文件章加入上面的内容</strong></p>
+<h3 id="部署-Hadoop-至集群"><a href="#部署-Hadoop-至集群" class="headerlink" title="部署 Hadoop 至集群"></a>部署 Hadoop 至集群</h3><p>输入以下命令将 Hadoop 安装目录同步至另外两个节点</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">scp -r hadoop-3.3.1&#x2F; hadoop@hadoopslave1:&#x2F;home&#x2F;hadoop&#x2F;apps
+scp -r hadoop-3.3.1&#x2F; hadoop@hadoopslave2:&#x2F;home&#x2F;hadoop&#x2F;apps</code></pre>
+
+<p>修改各个节点的环境变量， 在 <code>/etc/profile</code> 添加</p>
+<pre class="language-none"><code class="language-none">export HADOOP_HOME&#x3D;&#x2F;home&#x2F;hadoop&#x2F;apps&#x2F;hadoop-3.3.1
+export PATH&#x3D;$PATH:$HADOOP_HOME&#x2F;bin:$HADOOP_HOME&#x2F;sbin</code></pre>
+
+<p>重新加载环境变量</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">source &#x2F;etc&#x2F;profile</code></pre>
+
+<p>通过 <code>hadoop --help</code> 测试配置是否成功</p>
+<h3 id="初始化-namenode"><a href="#初始化-namenode" class="headerlink" title="初始化 namenode"></a>初始化 namenode</h3><p>在先前配置的 namenode 上执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop namenode -format</code></pre>
+
+<p>若输出信息打印 <code>successfully formatted</code> ，即说明初始化成功，检查 <code>hadoop</code> 目录下应多出一个 <code>hadoopdata</code> 目录</p>
+<h2 id="启动-Hadoop集群"><a href="#启动-Hadoop集群" class="headerlink" title="启动 Hadoop集群"></a>启动 Hadoop集群</h2><p>顺利到达这一步，胜利近在眼前，好耶！<del>其实后面又出了一堆bug调试了大半天</del></p>
+<h3 id="启动-HDFS"><a href="#启动-HDFS" class="headerlink" title="启动 HDFS"></a>启动 HDFS</h3><p>在任意节点上执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">start-dfs.sh</code></pre>
+
+<p>启动完成后，在各个节点上通过 <code>jps</code> 命令检查进程，根据以上的配置，查询到的进程应为</p>
+<ul>
+<li><p>hadoopmaster 上</p>
+<p>存在 namenode 、datanode、jps 三类进程</p>
+</li>
+<li><p>hadoopslave1 上</p>
+<p>存在 secondarynamenode 、datanode、jps 三类进程</p>
+</li>
+<li><p>hadoopslave2 上</p>
+<p>存在 datanode、jps 两类进程</p>
+</li>
+</ul>
+<h3 id="启动-yarn"><a href="#启动-yarn" class="headerlink" title="启动 yarn"></a>启动 yarn</h3><p>在 resourcemanager 节点上执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">start-yarn.sh</code></pre>
+
+<p>启动完成后，在该节点上可以查询到 resourcemanager 进程</p>
+<h2 id="尝试运行-WordCount"><a href="#尝试运行-WordCount" class="headerlink" title="尝试运行 WordCount"></a>尝试运行 WordCount</h2><p>准备一份文本文件，上传至任意节点，通过命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop fs -put test.txt &#x2F;input</code></pre>
+
+<p>把节点上的 <code>test.txt</code> 文件上传到 hdfs 系统的 <code>/input</code> 目录下</p>
+<p>执行命令</p>
+<pre class="language-sh" data-language="sh"><code class="language-sh">hadoop jar &#x2F;home&#x2F;hadoop&#x2F;apps&#x2F;hadoop-3.3.1&#x2F;share&#x2F;hadoop&#x2F;mapreduce&#x2F;hadoop-mapreduce-examples-3.3.1.jar wordcount &#x2F;input &#x2F;output</code></pre>
+
+<p>表示对 <code>/input</code> 目录下的文件执行 WordCount 应用，将结果输出到 <code>/output</code> 目录下</p>
+<p>执行成功后，通过浏览器访问名节点的 9870 端口，可以进入文件系统，在 <code>/output</code> 目录下可以看到一个 <code>part-r-00000</code> 文件，这就是结果文件。</p>
+<p>至此，整个节点的搭建与部署完成，之后就只要找点测试文件测一测，<del>摆大烂了</del>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>写这么篇博客也就是复盘一下课设整个过程，虽然大数据课老师基本啥也没讲，布置这么一个作业实在是很啥比，但 Hadoop 还是很有用的，记录一下万一以后用到了呢。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Kken</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://www.blogkken.cc/2021/11/20/learing_hadoop/">https://www.blogkken.cc/2021/11/20/learing_hadoop/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://www.blogkken.cc" target="_blank">Kkenの牢骚小站</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a><a class="post-meta__tags" href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据</a><a class="post-meta__tags" href="/tags/Hadoop/">Hadoop</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-img/Hadoop.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img/img/pay-qrcode/IMG_20210804_163811.png" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img/img/pay-qrcode/IMG_20210804_163811.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img/img/pay-qrcode/IMG_20210804_163731.jpg" target="_blank"><img class="post-qr-code-img" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img/img/pay-qrcode/IMG_20210804_163731.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2021/08/31/wuyule/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/somethingnotgood.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">这个神奇的防沉迷</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/08/24/Java-note-1/" title="Java学习笔记-初识Java"><img class="cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Java学习笔记-初识Java</div></div></a></div><div><a href="/2021/08/24/Java-note-4/" title="Java学习笔记-Java方法"><img class="cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Java学习笔记-Java方法</div></div></a></div><div><a href="/2021/08/24/Java-note-2/" title="Java学习笔记-Java基础"><img class="cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Java学习笔记-Java基础</div></div></a></div><div><a href="/2021/08/24/Java-note-3/" title="Java学习笔记-Java流程控制"><img class="cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Java学习笔记-Java流程控制</div></div></a></div><div><a href="/2021/08/24/Java-note-5/" title="Java学习笔记-数组"><img class="cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-24</div><div class="title">Java学习笔记-数组</div></div></a></div><div><a href="/2021/08/25/Java-note-7/" title="Java学习笔记-异常"><img class="cover" src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-25</div><div class="title">Java学习笔记-异常</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Livere</span><span class="switch-btn"></span><span class="second-comment">Waline</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81NDAwMC8zMDQ3Mg"></div></div><div><div id="waline-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/avatar90730715_p0.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Kken</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Kenguo05"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Kenguo05" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:guochen505@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">又懒又菜，随缘更新~~</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%AF%BE%E8%AE%BE%E5%A4%A9%E9%99%8D"><span class="toc-number">1.</span> <span class="toc-text">大数据课设天降</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E5%8C%96%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">虚拟化环境的搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">网络配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-JDK"><span class="toc-number">4.</span> <span class="toc-text">安装 JDK</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="toc-number">5.</span> <span class="toc-text">配置免密登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2-Hadoop"><span class="toc-number">6.</span> <span class="toc-text">安装部署 Hadoop</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-Hadoop"><span class="toc-number">6.1.</span> <span class="toc-text">安装 Hadoop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-Hadoop-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number">6.2.</span> <span class="toc-text">修改 Hadoop 配置文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-hadoop-env-sh"><span class="toc-number">6.2.1.</span> <span class="toc-text">修改 hadoop-env.sh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-core-site-xml"><span class="toc-number">6.2.2.</span> <span class="toc-text">修改 core-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-hdfs-site-xml"><span class="toc-number">6.2.3.</span> <span class="toc-text">修改 hdfs-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9mapred-site-xml"><span class="toc-number">6.2.4.</span> <span class="toc-text">修改mapred-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-yarn-site-xml"><span class="toc-number">6.2.5.</span> <span class="toc-text">修改 yarn-site.xml</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9-workers-%E6%96%87%E4%BB%B6"><span class="toc-number">6.2.6.</span> <span class="toc-text">修改 workers 文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2-Hadoop-%E8%87%B3%E9%9B%86%E7%BE%A4"><span class="toc-number">6.3.</span> <span class="toc-text">部署 Hadoop 至集群</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96-namenode"><span class="toc-number">6.4.</span> <span class="toc-text">初始化 namenode</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-Hadoop%E9%9B%86%E7%BE%A4"><span class="toc-number">7.</span> <span class="toc-text">启动 Hadoop集群</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-HDFS"><span class="toc-number">7.1.</span> <span class="toc-text">启动 HDFS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8-yarn"><span class="toc-number">7.2.</span> <span class="toc-text">启动 yarn</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%9D%E8%AF%95%E8%BF%90%E8%A1%8C-WordCount"><span class="toc-number">8.</span> <span class="toc-text">尝试运行 WordCount</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">9.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/11/20/learing_hadoop/" title="虚拟环境下Hadoop集群测试运行WordCount"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-img/Hadoop.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="虚拟环境下Hadoop集群测试运行WordCount"/></a><div class="content"><a class="title" href="/2021/11/20/learing_hadoop/" title="虚拟环境下Hadoop集群测试运行WordCount">虚拟环境下Hadoop集群测试运行WordCount</a><time datetime="2021-11-20T10:48:34.000Z" title="发表于 2021-11-20 18:48:34">2021-11-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/31/wuyule/" title="这个神奇的防沉迷"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/somethingnotgood.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="这个神奇的防沉迷"/></a><div class="content"><a class="title" href="/2021/08/31/wuyule/" title="这个神奇的防沉迷">这个神奇的防沉迷</a><time datetime="2021-08-31T11:27:30.000Z" title="发表于 2021-08-31 19:27:30">2021-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/25/Java-note-7/" title="Java学习笔记-异常"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记-异常"/></a><div class="content"><a class="title" href="/2021/08/25/Java-note-7/" title="Java学习笔记-异常">Java学习笔记-异常</a><time datetime="2021-08-25T11:31:34.000Z" title="发表于 2021-08-25 19:31:34">2021-08-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/24/Java-note-6/" title="Java学习笔记-面向对象"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记-面向对象"/></a><div class="content"><a class="title" href="/2021/08/24/Java-note-6/" title="Java学习笔记-面向对象">Java学习笔记-面向对象</a><time datetime="2021-08-24T12:42:34.000Z" title="发表于 2021-08-24 20:42:34">2021-08-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/24/Java-note-5/" title="Java学习笔记-数组"><img src="https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-cover/Java.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java学习笔记-数组"/></a><div class="content"><a class="title" href="/2021/08/24/Java-note-5/" title="Java学习笔记-数组">Java学习笔记-数组</a><time datetime="2021-08-24T10:09:34.000Z" title="发表于 2021-08-24 18:09:34">2021-08-24</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/Kenguo05/blog-img@main/img/blog-img/Hadoop.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2021 By Kken</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">宜观星辰辨南北，勿随萤火逐东西</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !false) {
+  if (false) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script><script>function loadWaline () {
+  function initWaline () {
+    const waline = new Waline(Object.assign({
+      el: '#waline-wrap',
+      serverURL: 'https://blog-api-azure.vercel.app/',
+      avatar: 'monsterid',
+      avatarCDN: 'https://sdn.geekzu.org/avatar/',
+      path: location.pathname,
+      visitor: false,
+      dark: 'html[data-theme="dark"]'
+    }, null))
+  }
+
+  if (typeof Waline === 'function') initWaline() 
+  else getScript('https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js').then(initWaline)
+}
+
+if ('Livere' === 'Waline' || !false) {
+  if (false) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+  else setTimeout(loadWaline, 0)
+} else {
+  function loadOtherComment () {
+    loadWaline()
+  }
+}</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
