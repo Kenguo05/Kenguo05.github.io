@@ -1,6 +1,6 @@
 ---
 title: Java学习笔记-初识Java
-update: 2021-08-24 01:07:08
+date: 2021-08-24 01:07:08
 tags: 
   - Java
   - 学习
