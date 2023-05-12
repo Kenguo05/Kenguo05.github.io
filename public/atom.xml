@@ -6,7 +6,7 @@
   <link href="https://www.blogkken.cc/atom.xml" rel="self"/>
   
   <link href="https://www.blogkken.cc/"/>
-  <updated>2021-11-29T09:56:40.000Z</updated>
+  <updated>2023-05-12T06:43:44.276Z</updated>
   <id>https://www.blogkken.cc/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.blogkken.cc/2021/11/20/learing_hadoop/"/>
     <id>https://www.blogkken.cc/2021/11/20/learing_hadoop/</id>
     <published>2021-11-20T10:48:34.000Z</published>
-    <updated>2021-11-29T09:56:40.000Z</updated>
+    <updated>2023-05-12T06:43:44.276Z</updated>
     
     
     <summary type="html">卑微上学人应付大数据课程设计搭建了一个虚拟的Hadoop集群跑了一下WordCount</summary>
@@ -48,7 +48,7 @@
     <link href="https://www.blogkken.cc/2021/08/31/wuyule/"/>
     <id>https://www.blogkken.cc/2021/08/31/wuyule/</id>
     <published>2021-08-31T11:27:30.000Z</published>
-    <updated>2021-08-31T12:31:36.000Z</updated>
+    <updated>2023-05-12T06:43:44.276Z</updated>
     
     
     <summary type="html">四千年前中国人就知道堵不如疏</summary>
@@ -69,7 +69,7 @@
     <link href="https://www.blogkken.cc/2021/08/25/Java-note-7/"/>
     <id>https://www.blogkken.cc/2021/08/25/Java-note-7/</id>
     <published>2021-08-25T11:31:34.000Z</published>
-    <updated>2021-08-28T17:00:34.000Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">学会预测、发现、捕获、处理异常，保证程序运行的安全性</summary>
@@ -92,7 +92,7 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-6/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-6/</id>
     <published>2021-08-24T12:42:34.000Z</published>
-    <updated>2021-08-28T17:04:08.000Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">Java 真正的精髓， Java 学习的正片，面向对象三大特征：封装、继承、多态，以及深刻理解抽象这一内核</summary>
@@ -115,7 +115,7 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-5/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-5/</id>
     <published>2021-08-24T10:09:34.000Z</published>
-    <updated>2021-08-28T17:03:20.000Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">没啥好说的，Java 中数组与 C 语言中大差不差，但 Java 中提供了 for - each 循环遍历数组，而且还有强大的 Arrays 类提供数组的各种方法</summary>
@@ -138,7 +138,7 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-4/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-4/</id>
     <published>2021-08-24T08:20:00.000Z</published>
-    <updated>2021-08-28T17:03:06.000Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">Java 中的方法类似 C 语言中的函数，定义、调用等流程都基本相同。Java 是值传递的，可以利用 C 语言的指针解释许多貌似是引用传递的现象</summary>
@@ -161,7 +161,7 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-3/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-3/</id>
     <published>2021-08-24T04:59:00.000Z</published>
-    <updated>2021-08-28T17:02:48.000Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">基本所有语言都要学习的流程控制，包括了顺序结构、选择结构和循环结构，学完这个理论上就可以写点简单的程序玩了</summary>
@@ -184,7 +184,7 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-2/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-2/</id>
     <published>2021-08-23T18:23:48.000Z</published>
-    <updated>2021-08-28T17:02:24.000Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">学习 Java 基本的语法知识，比如注释、关键字、运算符blablablabla......有其他语言基础学起来果然轻松不少</summary>
@@ -207,7 +207,7 @@
     <link href="https://www.blogkken.cc/2021/08/24/Java-note-1/"/>
     <id>https://www.blogkken.cc/2021/08/24/Java-note-1/</id>
     <published>2021-08-23T17:07:08.000Z</published>
-    <updated>2022-03-12T10:49:06.307Z</updated>
+    <updated>2023-05-12T06:43:44.275Z</updated>
     
     
     <summary type="html">从零开始学习 Java</summary>
